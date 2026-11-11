@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "chapters": [
+    {
+      "id": "montecristo-1",
+      "bookId": "montecristo",
+      "title": "L'arrivo del Faraone",
+      "durationMinutes": 8,
+      "text": "Il 24 febbraio 1815, la vedetta di Notre-Dame de la Garde segnalò il tre alberi Faraone, proveniente da Smirne, Trieste e Napoli.",
+      "audioUrl": null,
+      "source": "estratto dimostrativo, non testo integrale"
+    }
+  ]
+}
