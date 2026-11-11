@@ -1,0 +1,2721 @@
+{
+  "id": "montecristo",
+  "titolo": "Il conte di Montecristo",
+  "autore": "Alexandre Dumas",
+  "durataAudioSecondi": 1115,
+  "chiaveSegnalibro": "switch_montecristo_selected",
+  "segmenti": [
+    {
+      "text": "Il 28 febbraio 1815, la vedetta di Notre-Dame-de-la-Garde",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "segnalò l'arrivo del Pharaon, un veliero a tre",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "alberi proveniente da Smirne, Trieste e Napoli.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Come di consueto, un pilota costiero lasciò immediatamente",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "il porto e, passando accanto al castello d'If,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "raggiunse la nave tra capo Morgiou e l'isola",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "di Riou.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Anche sulla spianata del forte Saint-Jean, come accadeva",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "a ogni arrivo, si radunò subito una folla",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "di curiosi.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "A Marsiglia l'arrivo di una nave era un",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avvenimento importante, soprattutto quando si trattava di un",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "bastimento come il Pharaon, costruito, equipaggiato e caricato",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "nei cantieri dell’antica città focese e appartenente a",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "un armatore marsigliese.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Intanto il veliero avanzava.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Aveva superato senza difficoltà lo stretto scavato da",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "un'antica scossa vulcanica tra l'isola di Calseraigne e",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "quella di Jarre, aveva doppiato Pomègues e procedeva",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "con le tre vele di gabbia, il gran",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "fiocco e la randa.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma avanzava così lentamente, con un’andatura tanto mesta,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "che gli spettatori, spinti da quell'istinto che fa",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "presagire le disgrazie, si chiedevano quale incidente potesse",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "essersi verificato a bordo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "I marinai più esperti, tuttavia, capivano che, se",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "qualcosa era accaduto, non poteva trattarsi di un'avaria",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "alla nave.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il Pharaon era governato con assoluta precisione: l'ancora",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "era pronta a essere calata, le sartie del",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "bompresso erano state sganciate e, accanto al pilota",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "che si preparava a guidare il bastimento attraverso",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "lo stretto ingresso del porto di Marsiglia, si",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "muoveva un giovane marinaio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Aveva gesti rapidi e uno sguardo attento; sorvegliava",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ogni movimento della nave e ripeteva gli ordini",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "del pilota.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "L'inquietudine che si era diffusa tra la folla",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "colpì soprattutto uno degli uomini radunati sulla spianata",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "di Saint-Jean.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Non riuscì ad aspettare che il Pharaon entrasse",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "in porto: saltò su una barchetta, ordinò ai",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "rematori di dirigersi verso il veliero e lo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "raggiunse davanti all'insenatura della Réserve.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Vedendolo arrivare, il giovane marinaio lasciò il proprio",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "posto accanto al pilota e, con il cappello",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "in mano, si avvicinò alla murata.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Era un ragazzo di diciotto o vent'anni, alto",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e snello, con occhi neri e capelli color",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ebano.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Tutto, nel suo aspetto, esprimeva quella calma risoluta",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "che appartiene agli uomini abituati fin dall'infanzia ad",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "affrontare il pericolo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ah, siete voi, Dantès!» gridò l'uomo dalla barca.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Che cosa è successo?",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Perché a bordo hanno tutti quell'aria triste?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Una grave disgrazia, signor Morrel» rispose il giovane.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Una disgrazia soprattutto per me.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "All'altezza di Civitavecchia abbiamo perduto il valoroso capitano",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Leclère.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E il carico?» domandò subito l'armatore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Il carico è arrivato in ottime condizioni, signor",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Morrel, e credo che ne sarete soddisfatto.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma il povero capitano Leclère...»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Che cosa gli è accaduto?» chiese Morrel, visibilmente",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "sollevato dalle notizie sul carico.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Che cosa è successo al nostro bravo capitano?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È morto.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Caduto in mare?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«No, signore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "È morto di febbre cerebrale, dopo sofferenze terribili.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Poi Dantès si voltò verso l'equipaggio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Forza, tutti ai posti di manovra per l’ormeggio!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Gli otto o dieci marinai che componevano l'equipaggio",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "si precipitarono alle manovre: alcuni alle scotte, altri",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ai bracci, altri ancora alle drizze, ai fiocchi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e agli imbrogli delle vele.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il giovane seguì con uno sguardo sicuro l'inizio",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "delle operazioni e, quando vide che gli ordini",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "venivano eseguiti, tornò a parlare con l'armatore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ma com'è avvenuta questa disgrazia?» riprese Morrel.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Nel modo più inatteso.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dopo un lungo colloquio con il comandante del",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "porto, il capitano Leclère lasciò Napoli molto turbato.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ventiquattr'ore dopo fu colpito dalla febbre e tre",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "giorni più tardi morì.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Gli abbiamo celebrato il funerale secondo l’uso dei",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "marinai.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ora riposa in fondo al mare, al largo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "dell’isola del Giglio: lo abbiamo calato in acqua",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avvolto in un’amaca, con una palla da trentasei",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ai piedi e una alla testa.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Riportiamo alla vedova la sua croce della Legion",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "d'onore e la sua spada.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Pensate: aveva affrontato dieci anni di guerra contro",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "gli inglesi, per poi morire nel proprio letto,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "come tutti gli altri.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il giovane accompagnò le ultime parole con un",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "sorriso malinconico.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Che volete farci?» replicò l'armatore, che sembrava essersi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ripreso.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Siamo tutti mortali.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "I vecchi devono lasciare il posto ai giovani,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "altrimenti non ci sarebbe progresso.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "E dal momento che mi assicurate che il",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "carico...»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È in ottimo stato, signor Morrel, ve lo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "garantisco.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Vi consiglio di calcolare per questo viaggio almeno",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "venticinquemila franchi di utile.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Poi, mentre la nave oltrepassava la torre rotonda,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dantès si rivolse nuovamente ai marinai:",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Preparatevi ad ammainare le vele di gabbia, il",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "fiocco e la randa!",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Mollate il serrabozze!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "L'ordine fu eseguito con una prontezza degna di",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "una nave da guerra.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ammainate e imbrogliate tutto!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "All'ultimo comando, le vele si abbassarono e il",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Pharaon continuò ad avanzare quasi impercettibilmente, spinto soltanto",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "dall'abbrivio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E ora, signor Morrel», disse Dantès, accorgendosi dell’impazienza",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "dell’armatore, «dalla cabina sta uscendo il vostro contabile,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "il signor Danglars.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Potrà darvi tutte le informazioni che desiderate.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Quanto a me, devo occuparmi dell'ancoraggio e far",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "mettere la nave a lutto.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Morrel non ebbe bisogno che glielo dicesse due",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "volte.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Afferrò una cima lanciata da Dantès e, con",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "un'agilità che avrebbe fatto onore a un marinaio,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "salì lungo i pioli fissati al fianco della",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "nave.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Intanto Dantès tornava ai suoi compiti di secondo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e lasciava che l'armatore parlasse con l'uomo appena",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "comparso sul ponte.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Danglars aveva venticinque o ventisei anni e un",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "viso piuttosto cupo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Era servile con i superiori e arrogante con",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "i sottoposti.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Già il suo incarico di contabile di bordo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "lo rendeva poco gradito ai marinai; il suo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "carattere faceva il resto.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Se Edmond Dantès era amato dall'equipaggio, Danglars ne",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "era odiato.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Allora, signor Morrel» esordì, «avete saputo della disgrazia?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sì, sì.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Povero capitano Leclère!",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Era un uomo valoroso e onesto.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E soprattutto un eccellente marinaio, invecchiato tra cielo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e mare, proprio come si addice a chi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "comanda una nave della ditta Morrel e Figlio»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "aggiunse Danglars.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Eppure» osservò l'armatore, seguendo con lo sguardo Dantès",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "che si occupava dell'ormeggio, «non mi pare necessario",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "essere così anziani per conoscere bene il proprio",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "mestiere.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Guardate il nostro Edmond: svolge il suo lavoro",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "come uno che non ha bisogno di chiedere",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "consigli a nessuno.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Già» convenne Danglars, lanciando a Dantès uno sguardo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "carico d'odio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È giovane e non dubita mai di nulla.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il capitano era appena morto e lui ha",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "assunto il comando senza consultare nessuno.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "E ci ha fatto perdere un giorno e",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "mezzo all'isola d'Elba, invece di tornare direttamente a",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Marsiglia.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Assumere il comando era suo dovere, in qualità",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "di secondo» rispose Morrel.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Quanto alla sosta all'Elba, ha commesso un errore,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "a meno che la nave non avesse qualche",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avaria da riparare.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«La nave era in condizioni perfette, come me",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e come voi, signor Morrel.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Quel giorno e mezzo è stato perso per",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "un semplice capriccio: il piacere di mettere piede",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "a terra, niente di più.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Dantès!», chiamò l’armatore voltandosi verso il giovane.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Venite qui, per favore!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Perdonatemi, signore» rispose Dantès.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sarò da voi tra un istante.» Poi si",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "rivolse all'equipaggio: «Calate l'ancora!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "L'ancora precipitò in mare e la catena scorse",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "con un fragore metallico.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Nonostante la presenza del pilota, Dantès rimase al",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "proprio posto finché la manovra non fu terminata.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ammainate la fiamma a mezz'albero» ordinò allora.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Mettete la bandiera a mezz'asta e incrociate i",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "pennoni.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Vedete?» disse Danglars.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Si crede già capitano, parola mia.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«In effetti, lo è già», rispose Morrel.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Gli mancano soltanto la vostra firma e quella",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "del vostro socio, signor Morrel.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E perché non dovremmo lasciarlo in quell'incarico?",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "È giovane, lo so, ma mi sembra capace",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e molto esperto nel suo mestiere.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il volto di Danglars si rabbuiò.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Perdonatemi, signor Morrel» disse Dantès avvicinandosi.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ora che la nave è all'ancora, sono a",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "vostra disposizione.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Mi avevate chiamato, credo.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Danglars fece un passo indietro.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Volevo chiedervi perché vi siete fermati all'isola d'Elba.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Per eseguire un ultimo ordine del capitano Leclère.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Prima di morire mi aveva affidato un plico",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "destinato al gran maresciallo Bertrand.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Avete dunque visto il gran maresciallo, Edmond?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sì.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Morrel si guardò intorno e prese Dantès in",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "disparte.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E come sta l'imperatore?» domandò con premura.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Bene, per quanto ho potuto giudicare con i",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "miei occhi.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Avete visto anche l'imperatore?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È entrato dal maresciallo mentre mi trovavo lì.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E gli avete parlato?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«A dire il vero, è stato lui a",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "parlare con me» rispose Dantès sorridendo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Che cosa vi ha detto?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Mi ha chiesto notizie della nave, quando fossimo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "partiti da Marsiglia, quale rotta avessimo seguito e",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "che cosa trasportassimo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Credo che, se il Pharaon fosse stato vuoto",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e io ne fossi stato il proprietario, avrebbe",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "voluto comprarlo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma gli ho spiegato che ero soltanto il",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "secondo e che la nave apparteneva alla ditta",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Morrel e Figlio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "“Ah, la conosco!” mi ha detto.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "“I Morrel sono armatori di padre in figlio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "C'era un Morrel che serviva nel mio stesso",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "reggimento, quando ero di guarnigione a Valence.”»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È vero, per Giove!» esclamò l'armatore, raggiante.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Era Policar Morrel, mio zio, che poi diventò",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "capitano.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dantès, dite a mio zio che l'imperatore si",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ricorda ancora di lui: vedrete piangere quel vecchio",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "brontolone!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Poi batté amichevolmente una mano sulla spalla del",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "giovane.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Avete fatto bene a eseguire le istruzioni del",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "capitano Leclère e a fermarvi all'Elba.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Tuttavia, se si venisse a sapere che avete",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "consegnato un plico al maresciallo e parlato con",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "l'imperatore, potreste finire nei guai.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Non vedo perché, signore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Non so neppure che cosa contenesse il plico,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e l'imperatore mi ha fatto soltanto domande che",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avrebbe potuto rivolgere a chiunque.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma scusatemi» aggiunse Dantès, «stanno arrivando gli ufficiali",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "della sanità marittima e della dogana.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Mi permettete di andare?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Certo, mio caro Dantès.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il giovane si allontanò.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Non appena fu a distanza, Danglars si fece",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avanti.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«A quanto pare, vi ha spiegato in modo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "convincente la sosta a Portoferraio.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ottime, mio caro Danglars.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Tanto meglio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "È sempre spiacevole scoprire che un compagno non",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ha fatto il proprio dovere.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Dantès ha compiuto il suo» replicò l'armatore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Non c'è nulla da rimproverargli.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "È stato il capitano Leclère a ordinare la",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "sosta.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«A proposito del capitano Leclère, non vi ha",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "forse consegnato una lettera?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«A me?",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "No.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ne aveva una?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Credevo che, oltre al plico, il capitano avesse",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "affidato a Dantès anche una lettera.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Di quale plico parlate, Danglars?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Di quello che Dantès ha lasciato a Portoferraio.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Come fate a saperlo?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Danglars arrossì.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Passavo davanti alla porta della cabina del capitano.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Era socchiusa e l'ho visto consegnare a Dantès",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "il plico e la lettera.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Non me ne ha parlato», osservò Morrel pensieroso.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ma, se ha una lettera per me, me",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "la consegnerà.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Danglars rimase in silenzio per un istante.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«In tal caso, signor Morrel, vi prego di",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "non dirgli nulla.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Potrei essermi sbagliato.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Proprio allora Dantès tornò verso di loro, e",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Danglars si allontanò.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ebbene, mio caro Dantès» domandò l'armatore, «siete libero?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sì, signore.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Non ci avete messo molto.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«No.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ho consegnato ai doganieri l'elenco delle merci e,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "insieme al pilota costiero, ho mandato un uomo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "agli uffici sanitari con i documenti della nave.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Allora non avete più niente da fare qui?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dantès lanciò una rapida occhiata intorno a sé.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«No, è tutto in ordine.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Potreste dunque venire a cena da noi.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Perdonatemi, signor Morrel.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Vi sono molto grato dell'invito, ma la mia",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "prima visita deve essere per mio padre.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È giusto, Dantès.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "So che siete un bravo figlio.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E... ditemi, signor Morrel» chiese il giovane con",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "una certa esitazione, «sapete se mio padre sta",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "bene?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Credo di sì, caro Edmond, anche se non",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "l'ho visto.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ma so che se ne sta chiuso nella",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "sua stanzetta.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Questo dimostra almeno che durante la vostra assenza",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "non gli è mancato nulla.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dantès sorrise.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Mio padre è orgoglioso, signore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Anche se gli fosse mancato tutto, dubito che",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avrebbe chiesto qualcosa a qualcuno, all'infuori di Dio.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Bene.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dopo questa prima visita, allora, contiamo su di",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "voi.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Perdonatemi ancora, signor Morrel, ma dopo la prima",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ne ho una seconda che mi sta altrettanto",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "a cuore.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ah, è vero, Dantès!",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dimenticavo che ai Catalani c'è qualcuno che deve",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "aspettarvi con non meno impazienza di vostro padre:",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "la bella Mercédès.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Dantès sorrise.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Ora capisco perché sia venuta tre volte a",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "chiedere notizie del Pharaon!",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Edmond, non siete certo da compatire: avete una",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "fidanzata incantevole.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Non è soltanto la donna che amo, signore»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "disse il giovane con solennità.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«È la mia promessa sposa.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«A volte le due cose coincidono», osservò Morrel",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ridendo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Non per noi» rispose Dantès.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Via, via, mio caro Edmond, non voglio trattenervi.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Avete badato così bene ai miei interessi che",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "è giusto che vi lasci occupare dei vostri.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Avete bisogno di denaro?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«No, signore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ho con me tutta la paga del viaggio:",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "quasi tre mesi di stipendio.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sapete amministrare bene il vostro denaro, Edmond.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Aggiungete che ho un padre povero, signor Morrel.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sì, sì, lo so.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Siete un bravo figlio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Andate da vostro padre.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Anch'io ho un figlio, e sarei molto addolorato",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "se, dopo tre mesi di assenza, qualcuno lo",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "trattenesse lontano da me.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Allora mi date il permesso?» domandò Dantès, inchinandosi.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Sì, se non avete altro da dirmi.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«No, signore.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Il capitano Leclère, prima di morire, non vi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ha affidato per caso una lettera per me?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Scrivere gli sarebbe stato impossibile.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma ora che me lo ricordate, dovrei chiedervi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "un permesso di quindici giorni.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Per sposarvi?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Prima di tutto per sposarmi.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Poi per andare a Parigi.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Va bene, va bene!",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Prendetevi tutto il tempo necessario.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Per scaricare la nave ci vorranno almeno sei",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "settimane, e non riprenderemo il mare prima di",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "tre mesi.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma tra tre mesi dovrete essere qui: il",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Pharaon non può partire senza il suo capitano.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Senza il suo capitano!», esclamò Dantès, con gli",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "occhi che brillavano di gioia.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Fate attenzione a quello che dite, signore: state",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "rispondendo alle speranze più segrete del mio cuore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Volete davvero nominarmi capitano del Pharaon?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Se dipendesse soltanto da me, mio caro Dantès,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "vi stringerei la mano e vi direi che",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "è fatta.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma ho un socio, e conoscete il proverbio",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "italiano: chi ha compagno ha padrone.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "In ogni caso, metà della decisione è già",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "presa, perché avete già uno dei due voti.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Affidatevi a me per ottenere anche l'altro: farò",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "tutto quello che posso.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Oh, signor Morrel!» esclamò il giovane marinaio, afferrandogli",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "le mani con gli occhi pieni di lacrime.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Vi ringrazio a nome di mio padre e",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "di Mercédès.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Bene, bene, Edmond.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "In cielo c'è un Dio che veglia sulle",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "brave persone.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Adesso andate da vostro padre, poi da Mercédès,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "e tornate a trovarmi.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Volete che vi accompagni a terra?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«No, grazie.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Rimango a sistemare i conti con Danglars.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Durante il viaggio siete rimasto soddisfatto di lui?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Dipende da che cosa intendete, signore.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Come compagno, no.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Credo che non mi sopporti più da quando,",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "dopo una discussione tra noi, ebbi la sciocca",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "idea di proporgli di fermarci dieci minuti all'isola",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "di Montecristo per risolvere la questione.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Avevo torto a fargli quella proposta, e lui",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "fece bene a rifiutare.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Se invece me lo chiedete come contabile, non",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ho nulla da rimproverargli: credo che sarete soddisfatto",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "del suo lavoro.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«E se diventaste capitano del Pharaon, vorreste tenere",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Danglars a bordo?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Capitano o secondo, signor Morrel, avrò sempre il",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "massimo rispetto per chi gode della fiducia dei",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "miei armatori.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Su, Dantès, vedo che siete un bravo giovane",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "sotto ogni aspetto.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Non voglio trattenervi oltre.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Andate: mi sembra che non stiate più nella",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "pelle.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Allora ho il vostro permesso?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Andate pure.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Posso prendere la barca?»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Certamente.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Arrivederci, signor Morrel, e grazie di tutto.»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "«Arrivederci, mio caro Edmond.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Buona fortuna!»",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Il giovane saltò nella barca, si sedette a",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "poppa e ordinò ai marinai di dirigersi verso",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "la Canebière.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Due uomini si piegarono sui remi e la",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "piccola imbarcazione scivolò il più rapidamente possibile attraverso",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "lo stretto passaggio che si apre tra le",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "due file di navi all'ingresso del porto, fino",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "al molo d'Orléans.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "L'armatore lo seguì sorridendo con lo sguardo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Lo vide saltare a terra e scomparire tra",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "la folla che, dalle cinque del mattino alle",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "nove di sera, riempiva la celebre rue de",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "la Canebière, tanto orgogliosa di quella strada da",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ripetere con convinzione un detto locale: se Parigi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "avesse la Canebière, sarebbe una piccola Marsiglia.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Quando Morrel si voltò, vide Danglars alle proprie",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "spalle.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "In apparenza, il contabile aspettava soltanto i suoi",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "ordini; in realtà, anche lui aveva seguito con",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "gli occhi il giovane marinaio.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "Ma c'era una grande differenza tra i due",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "sguardi rivolti allo stesso uomo.",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    },
+    {
+      "text": "FINE DEL CAPITOLO I",
+      "pdfPage": 1,
+      "chapter": 1,
+      "chapterTitle": "Marsiglia. L’arrivo"
+    }
+  ]
+}
