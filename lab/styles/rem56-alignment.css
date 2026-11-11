@@ -10,3 +10,12 @@ main{max-width:1040px}
 #home>h2{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:clamp(31px,5vw,55px);font-weight:750;letter-spacing:-2px;line-height:1.04;margin:12px 0}
 #home>.muted{color:#b8c5d6;max-width:600px}
 @media(max-width:480px){header{padding:20px 18px 12px}header h1{font-size:24px}}
+
+/* Three-format control: 5.6-inspired navigation, without claiming missing assets. */
+.format-switch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:10px 0 18px}
+.format-choice{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:72px;padding:11px 5px;border:1px solid #526079;border-radius:14px;background:#17253a;color:#f7f4ed;text-align:center}
+.format-choice strong{font-size:.93rem}.format-choice span{font-size:.7rem;color:#b8c5d6}
+.format-choice[aria-pressed="true"]{border:2px solid #64dfa9;background:#193b3d}
+.format-choice:disabled{opacity:.57;cursor:not-allowed}
+.format-native{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:390px){.format-switch{gap:6px}.format-choice strong{font-size:.82rem}}
