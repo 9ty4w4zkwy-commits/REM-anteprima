@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "id": "montecristo",
+      "title": "Il conte di Montecristo",
+      "author": "Alexandre Dumas",
+      "status": "chapter-1",
+      "formats": [
+        "ebook",
+        "audio"
+      ],
+      "chaptersSource": "lab/content/book_montecristo.json",
+      "contentStatus": "integrated",
+      "visual": {
+        "coverStyle": "classic",
+        "eyebrow": "CLASSICI"
+      }
+    }
+  ]
+}
