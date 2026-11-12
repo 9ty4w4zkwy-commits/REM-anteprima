@@ -6,6 +6,12 @@ function stopAudio(){
  const player=$('audio')?.querySelector('audio');
  if(player&&!player.paused)player.pause();
 }
+function paperPages(pageMap){
+ return pageMap.map(item=>{
+  const page=typeof item==='number'||typeof item==='string'?item:item&&typeof item==='object'?(item.page??item.startPage??item.from):null;
+  return page===null||page===undefined?'':String(page);
+ }).filter(Boolean).join(', ');
+}
 function render({chapter,format,bookId,updateProgress}){
  stopAudio();
  const isEbook=format==='ebook';
@@ -16,7 +22,7 @@ function render({chapter,format,bookId,updateProgress}){
  const hasPaper=Array.isArray(chapter.pageMap)&&chapter.pageMap.length>0;
  $('chapterText').textContent=isEbook?chapter.text||'Testo non disponibile per questo capitolo.':
   format==='audio'?(hasAudio?'Ascolta il capitolo utilizzando il lettore audio.':'Traccia audio non disponibile per questo capitolo.'):
-  hasPaper?'Pagine cartacee: '+chapter.pageMap.map(item=>{const page=typeof item==='number'||typeof item==='string'?item:item&&typeof item==='object'?(item.page??item.startPage??item.from):null;return page===null||page===undefined?'':String(page)}).filter(Boolean).join(', ')+'.':'Mappatura delle pagine cartacee non disponibile per questo capitolo.';
+  hasPaper?(paperPages(chapter.pageMap)?'Pagine cartacee: '+paperPages(chapter.pageMap)+'.':'Riferimenti cartacei presenti, ma numeri di pagina non disponibili.'):'Mappatura delle pagine cartacee non disponibile per questo capitolo.';
  $('chapterText').classList.toggle('reader',isEbook);
  $('chapterProgress').value=0;
  $('chapterProgressLabel').textContent='0%';
