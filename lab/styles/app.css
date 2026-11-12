@@ -216,3 +216,14 @@ html[data-catalog="candidate"] #formatSwitch .format-choice:focus-visible{outlin
 .rem-episode-card{border-top:1px solid #486078;padding:12px 0}.rem-episode-card h3{margin:0 0 6px}.rem-episode-card p{margin:5px 0 10px}.rem-episode-card button{font-size:14px;padding:9px 11px}
 
 .rem-episode-number{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 5px;border-radius:50%;border:1px solid #63859a;color:#64dfa9;font-weight:700;margin-bottom:8px}
+
+/* REM 5.6 completion feedback overlay */
+.rem-rate-backdrop{position:fixed;inset:0;z-index:2147483647;background:#06101cbd;display:flex;align-items:center;justify-content:center;padding:18px}
+.rem-rate-dialog{width:min(440px,100%);background:#152b40;color:#fff;border:1px solid #597a8b;border-radius:20px;padding:24px 20px;text-align:center;box-shadow:0 14px 55px #0009}
+.rem-rate-dialog h2{font-size:1.35rem;margin:6px 0 12px}
+.rem-rate-dialog p{color:#bacbd8}
+.rem-rate-stars{display:flex;justify-content:center;gap:4px;margin:18px 0}
+.rem-rate-stars button{font-size:2rem;min-width:43px;min-height:54px;padding:5px;background:transparent;border:0;color:#64dfa9}
+.rem-rate-stars button[aria-pressed=false]{color:#a3b8c8}
+.rem-rating-submit{background:#64dfa9;color:#102135;border:0;font-weight:750}
+#remFinish{margin-top:20px}
