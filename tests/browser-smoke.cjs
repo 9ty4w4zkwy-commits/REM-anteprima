@@ -72,6 +72,15 @@ const {chromium}=require('playwright');
   checkScreenshot('reader');
   const readerImage=await page.screenshot({fullPage:false});
   if(readerImage.length<1000)throw Error('Reader viewport capture is unexpectedly small');
+  await page.locator('#goLibrary').click();
+  await page.locator('#shelfFilter').selectOption('reading');
+  if(await page.locator('#books .book').count()<1)throw Error('In-progress reading filter did not show started book');
+  await page.locator('#shelfFilter').selectOption('all');
+  const resumeReading=page.locator('#books button').filter({hasText:/Apri libro/i}).first();
+  await resumeReading.click();
+  if(await page.locator('#bookDetail').isVisible())await page.locator('#detailRead').click();
+  await page.locator('#reader').waitFor({state:'visible'});
+  console.log('PASS in-progress reading library filter');
   const formatState=await page.evaluate(()=>{
    const chapterId=document.getElementById('chapter').value;
    const selected=document.getElementById('format').value;
