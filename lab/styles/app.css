@@ -214,3 +214,5 @@ html[data-catalog="candidate"] #formatSwitch .format-choice:focus-visible{outlin
 .rem-episode-panel button:focus-visible{outline:3px solid #64dfa9;outline-offset:2px}
 
 .rem-episode-card{border-top:1px solid #486078;padding:12px 0}.rem-episode-card h3{margin:0 0 6px}.rem-episode-card p{margin:5px 0 10px}.rem-episode-card button{font-size:14px;padding:9px 11px}
+
+.rem-episode-number{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 5px;border-radius:50%;border:1px solid #63859a;color:#64dfa9;font-weight:700;margin-bottom:8px}
