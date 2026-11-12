@@ -24,8 +24,23 @@ function render({books,readingStats,openDetail,openBook}){
  }
  const started=books.find(item=>readingStats(item).read>0);
  $('homeResume').classList.toggle('hidden',!started);
- $('homeResumeStatus').textContent=started?'Riprendi '+started.title+' dal capitolo salvato.':'Non hai ancora iniziato una lettura.';
- $('homeResume').onclick=()=>{if(started)openBook(started.id)};
+ const episodeBook=books.find(item=>{
+  if(!window.REMEpisodes?.episodesFor(item.title).length)return false;
+  try{return localStorage.getItem('rem-reading-mode-53-'+item.title.toLowerCase().replace(/[^a-z0-9]/g,''))==='episodes'}catch{return false}
+ });
+ const resume=episodeBook||started;
+ if(episodeBook){
+  const episodes=window.REMEpisodes.episodesFor(episodeBook.title);
+  const key='rem-reading-mode-53-'+episodeBook.title.toLowerCase().replace(/[^a-z0-9]/g,'');
+  let index=0;try{index=Math.max(0,Math.min(episodes.length-1,Number(localStorage.getItem(key+'-episode')||0)||0))}catch{}
+  $('homeResumeStatus').textContent='Lettura a episodi · '+(index+1)+' / '+episodes.length+' · '+episodeBook.title;
+  $('homeResume').textContent='Riprendi episodio';
+ }else{
+  $('homeResumeStatus').textContent=started?'Riprendi '+started.title+' dal capitolo salvato.':'Non hai ancora iniziato una lettura.';
+  $('homeResume').textContent='Riprendi lettura';
+ }
+ $('homeResume').classList.toggle('hidden',!resume);
+ $('homeResume').onclick=()=>{if(resume)openBook(resume.id)};
 }
 window.REMHomeView={render};
 })();
