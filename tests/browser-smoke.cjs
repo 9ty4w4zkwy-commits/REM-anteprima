@@ -46,12 +46,18 @@ const {chromium}=require('playwright');
   }
   const episodeDialog=page.locator('.rem-episode-panel');
   await episodeDialog.waitFor({state:'visible'});
+  await checkMobileLayout('episode-choice');
+  await page.screenshot({path:'test-artifacts/episode-choice-mobile.png',fullPage:false});
   await episodeDialog.getByRole('button',{name:'A episodi'}).click();
+  await checkMobileLayout('episode-list');
+  await page.screenshot({path:'test-artifacts/episode-list-mobile.png',fullPage:false});
   await episodeDialog.getByText('L’arrivo del Faraone').waitFor();
   if(await episodeDialog.locator('.rem-episode-card').count()!==3)throw Error('Original Montecristo episode cards missing');
   if(await episodeDialog.locator('.rem-episode-card').first().getByRole('button').count()!==3)throw Error('Expected ebook, audiobook and paper formats per episode');
   await episodeDialog.getByRole('button',{name:'Ebook'}).first().click();
   await episodeDialog.getByText('Questa è una scheda episodio dimostrativa.',{exact:false}).waitFor();
+  await checkMobileLayout('episode-reader');
+  await page.screenshot({path:'test-artifacts/episode-reader-mobile.png',fullPage:false});
   const episodeStored=await page.evaluate(()=>({mode:localStorage.getItem('rem-reading-mode-53-ilcontedimontecristo'),index:localStorage.getItem('rem-reading-mode-53-ilcontedimontecristo-episode'),format:localStorage.getItem('rem-reading-mode-53-ilcontedimontecristo-format')}));
   if(episodeStored.mode!=='episodes'||episodeStored.index!=='0'||episodeStored.format!=='ebook')throw Error('Episode choice not persisted');
   await episodeDialog.getByRole('button',{name:'Apri libro completo'}).click();
