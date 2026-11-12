@@ -65,6 +65,16 @@ const {chromium}=require('playwright');
    if(button.disabled&&button.pressed==='true')throw Error('Unavailable reading format appears selected');
   }
   console.log('PASS chapter format availability and exclusive selection');
+  const availableAlternative=formatState.options.find(option=>!option.disabled&&option.value!==formatState.selected);
+  if(availableAlternative){
+   const choice=page.locator('#formatSwitch button').nth(formatState.options.findIndex(option=>option.value===availableAlternative.value));
+   await choice.click();
+   if(await page.locator('#format').inputValue()!==availableAlternative.value)throw Error('Format button did not change the active format');
+   const activeButtons=await page.locator('#formatSwitch button[aria-pressed="true"]').count();
+   if(activeButtons!==1)throw Error('Format switch did not preserve exclusive selection');
+   console.log('PASS user-driven reading format switch');
+  }else console.log('SKIP user-driven format switch: current chapter has only one available format');
+
   if(await page.locator('#nextChapter').isEnabled())await page.locator('#nextChapter').click();
   const savedReading=await page.evaluate(()=>{
    const entries=Object.entries(JSON.parse(localStorage.getItem('rem-modular-demo-v1')||'{}'));
