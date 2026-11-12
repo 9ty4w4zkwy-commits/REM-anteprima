@@ -10,7 +10,7 @@ const {chromium}=require('playwright');
    await page.setViewportSize({width,height:844});
    const dimensions=await page.evaluate(()=>({viewport:window.innerWidth,document:document.documentElement.scrollWidth}));
    if(dimensions.document>dimensions.viewport+2)throw Error(screen+' horizontal overflow at '+width+'px: '+dimensions.document+'px exceeds '+dimensions.viewport+'px');
-   await page.screenshot({path:'test-artifacts/'+screen+'-'+width+'px.png',fullPage:true});
+   await page.screenshot({path:'test-artifacts/'+screen+'-'+width+'px.png',fullPage:screen!=='reader'});
   }
   await page.setViewportSize({width:390,height:844});
  }
@@ -40,7 +40,7 @@ const {chromium}=require('playwright');
   await page.locator('#reader').waitFor({state:'visible'});
   if(!await page.locator('#chapterTitle').textContent())throw Error('Reader chapter title empty');
   await checkMobileLayout('reader');
-  await page.screenshot({path:'test-artifacts/reader-mobile.png',fullPage:true});
+  await page.screenshot({path:'test-artifacts/reader-mobile.png',fullPage:false});
   checkScreenshot('reader');
   await page.locator('#focusReading').click();
   if(await page.locator('#focusReading').getAttribute('aria-pressed')!=='true')throw Error('Immersive reading did not activate');
