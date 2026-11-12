@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id),state={books:[],chapters:[],selected:nul
 const key='rem-modular-demo-v1';let progress={};try{progress=JSON.parse(localStorage.getItem(key)||'{}')}catch{}
 const save=()=>{try{localStorage.setItem(key,JSON.stringify(progress))}catch{}};
 const notify=s=>{$('status').textContent=s};
-const show=id=>{for(const x of ['welcome','home','library','bookDetail','reader','settings']){const el=$(x);if(el)el.classList.toggle('hidden',x!==id)}};
+const show=window.REMNavigation.show;
 const welcomeKey='rem-modular-welcome-v1';
 $('welcomeStart').onclick=()=>{appearance.readingTheme=$('welcomeTheme').value;applyAppearance();try{localStorage.setItem(welcomeKey,'seen')}catch{}if(document.documentElement.dataset.catalog==='candidate')home();else library()};
 const bookChapters=id=>state.chapters.filter(c=>c.bookId===id);
