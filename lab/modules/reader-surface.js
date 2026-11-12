@@ -39,5 +39,5 @@ function render({chapter,format,bookId,updateProgress}){
  }
 }
 document.addEventListener?.('visibilitychange',()=>{if(document.hidden)stopAudio()});
-window.REMReaderSurface={render,stopAudio};
+window.REMReaderSurface={render,stopAudio,paperPages};
 })();
