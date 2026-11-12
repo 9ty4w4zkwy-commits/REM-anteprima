@@ -154,3 +154,13 @@ test('backgrounding the page pauses active audio',()=>{
  listener();
  assert.equal(pauses,1,'Background page must pause playback');
 });
+
+test('corrupt saved reading positions cannot crash statistics',()=>{
+ const stored=new Map([['rem-modular-demo-v1',JSON.stringify({'book-1':'broken','book-2':null})]]);
+ const localStorage={getItem:key=>stored.get(key)||null,setItem:(key,value)=>stored.set(key,value)};
+ const {api}=load('reading-store',{localStorage});
+ const chapters=[{id:'chapter-1'}];
+ assert.equal(api.REMReadingStore.stats({id:'book-1'},chapters).read,0);
+ assert.equal(api.REMReadingStore.stats({id:'book-2'},chapters).read,0);
+ assert.equal(api.REMReadingStore.get('toString').chapter,undefined);
+});
