@@ -16,23 +16,11 @@ $('resetReading').onclick=()=>{
 function home(){
  if(document.documentElement.dataset.catalog!=='candidate')return library();
  setImmersive(false);
- const book=state.books[0];
- if(book){
-  $('homeBookTitle').textContent=book.title;
-  $('homeBookAuthor').textContent=book.author||'';
-  for(const id of ['homeFreeCoverTitle','homeFreeTitle'])if($(id))$(id).textContent=book.title;
-  for(const id of ['homeFreeCoverAuthor','homeFreeAuthor'])if($(id))$(id).textContent=book.author||'';
-  $('homeExplore').onclick=()=>openDetail(book.id);
- }
- const started=state.books.find(item=>readingStats(item).read>0);
- $('homeResume').classList.toggle('hidden',!started);
- $('homeResumeStatus').textContent=started?'Riprendi '+started.title+' dal capitolo salvato.':'Non hai ancora iniziato una lettura.';
- $('homeResume').onclick=()=>{if(started)openBook(started.id)};
+ window.REMHomeView.render({books:state.books,readingStats,openDetail,openBook});
  show('home');
 }
 if($('homeLibrary'))$('homeLibrary').onclick=library;
 if($('homeShelfLibrary'))$('homeShelfLibrary').onclick=library;
-if($('homeFreeExplore'))$('homeFreeExplore').onclick=()=>{const book=state.books[0];if(book)openDetail(book.id)};
 if($('libraryHome'))$('libraryHome').onclick=home;
 function library(){setImmersive(false);show('library');updateHistory();window.REMLibrary.render({books:state.books,bookChapters,readingStats,openDetail,openBook});}
 $('bookSearch').addEventListener('input',library);
@@ -40,11 +28,7 @@ function openDetail(id){
  const book=state.books.find(item=>item.id===id);
  if(!book||!$('bookDetail'))return;
  state.selected=book;
- $('detailTitle').textContent=book.title;
- $('detailAuthor').textContent=book.author||'Autore non indicato';
- $('detailChapters').textContent=bookChapters(id).length+' capitoli disponibili';
- $('detailRead').textContent=readingStats(book).read?'Riprendi la lettura':'Inizia a leggere';
- $('detailRead').onclick=()=>openBook(id);
+ window.REMBookDetailView.render({book,chapterCount:bookChapters(id).length,hasProgress:readingStats(book).read>0,openBook});
  show('bookDetail');
 }
 if($('detailBack'))$('detailBack').onclick=library;
