@@ -3,7 +3,7 @@
 'use strict';
 const $=id=>document.getElementById(id),state={books:[],chapters:[],selected:null,format:'ebook',timer:null,remaining:0,deadline:0,focusDuration:0,settingsReturn:'library'};
 const notify=s=>{$('status').textContent=s};
-const show=window.REMNavigation.show;
+const show=id=>{if(id!=='reader')window.REMReaderSurface?.stopAudio();window.REMNavigation.show(id)};
 const welcomeKey='rem-modular-welcome-v1';
 $('welcomeStart').onclick=()=>{window.REMAppearance.set('readingTheme',$('welcomeTheme').value);try{localStorage.setItem(welcomeKey,'seen')}catch{}if(document.documentElement.dataset.catalog==='candidate')home();else library()};
 const bookChapters=id=>state.chapters.filter(c=>c.bookId===id);
