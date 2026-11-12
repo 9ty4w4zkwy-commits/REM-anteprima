@@ -3,9 +3,12 @@
 'use strict';
 const $=id=>document.getElementById(id);
 let activeAudio=null;
-function stopAudio(){
+function pauseAudio(){
  const player=$('audio')?.querySelector('audio');
  if(player&&!player.paused)player.pause();
+}
+function stopAudio(){
+ pauseAudio();
  activeAudio=null;
 }
 function paperPages(pageMap){
@@ -56,6 +59,6 @@ function render({chapter,format,bookId,updateProgress}){
   $('audio').append(audio);
  }
 }
-document.addEventListener?.('visibilitychange',()=>{if(document.hidden)stopAudio()});
+document.addEventListener?.('visibilitychange',()=>{if(document.hidden)pauseAudio()});
 window.REMReaderSurface={render,stopAudio,paperPages};
 })();
