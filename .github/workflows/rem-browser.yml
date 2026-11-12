@@ -1,5 +1,7 @@
 name: REM browser smoke test
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
 permissions:
