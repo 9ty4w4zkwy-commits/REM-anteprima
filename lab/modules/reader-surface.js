@@ -16,7 +16,7 @@ function render({chapter,format,bookId,updateProgress}){
  const hasPaper=Array.isArray(chapter.pageMap)&&chapter.pageMap.length>0;
  $('chapterText').textContent=isEbook?chapter.text||'Testo non disponibile per questo capitolo.':
   format==='audio'?(hasAudio?'Ascolta il capitolo utilizzando il lettore audio.':'Traccia audio non disponibile per questo capitolo.'):
-  hasPaper?'Riferimenti alle pagine cartacee disponibili per questo capitolo.':'Mappatura delle pagine cartacee non disponibile per questo capitolo.';
+  hasPaper?'Pagine cartacee: '+chapter.pageMap.map(item=>{const page=typeof item==='number'||typeof item==='string'?item:item&&typeof item==='object'?(item.page??item.startPage??item.from):null;return page===null||page===undefined?'':String(page)}).filter(Boolean).join(', ')+'.':'Mappatura delle pagine cartacee non disponibile per questo capitolo.';
  $('chapterText').classList.toggle('reader',isEbook);
  $('chapterProgress').value=0;
  $('chapterProgressLabel').textContent='0%';
