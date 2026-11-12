@@ -120,3 +120,19 @@ test('HTML contains every statically referenced module element',()=>{
   }
  }
 });
+
+test('reader surface pauses playing audio and leaves paused audio alone',()=>{
+ let pauses=0;
+ const player={paused:false,pause(){pauses++;this.paused=true}};
+ const document={getElementById:id=>id==='audio'?{querySelector:()=>player}:null};
+ const {api}=load('reader-surface',{document});
+ api.REMReaderSurface.stopAudio();
+ assert.equal(pauses,1);
+ api.REMReaderSurface.stopAudio();
+ assert.equal(pauses,1);
+});
+test('reader surface handles absence of an audio player',()=>{
+ const document={getElementById:id=>id==='audio'?{querySelector:()=>null}:null};
+ const {api}=load('reader-surface',{document});
+ assert.doesNotThrow(()=>api.REMReaderSurface.stopAudio());
+});
