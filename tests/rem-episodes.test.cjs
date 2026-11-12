@@ -1,0 +1,32 @@
+/* REM 5.6 episode parity checks. Run: node --test tests/rem-episodes.test.cjs */
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const path=require('node:path');
+const root=path.join(__dirname,'..');
+const read=file=>fs.readFileSync(path.join(root,file),'utf8');
+test('original REM 5.6 episode catalogue is preserved',()=>{
+ const context={window:{}};vm.createContext(context);
+ vm.runInContext(read('lab/modules/episodes.js'),context);
+ const get=context.window.REMEpisodes.episodesFor;
+ assert.deepEqual(Array.from(get('Il conte di Montecristo'),e=>e.title),['L’arrivo del Faraone','Il giovane Edmond Dantès','Le prime ombre']);
+ assert.deepEqual(Array.from(get('La casa oltre il bosco'),e=>e.title),['L’inizio del viaggio']);
+ assert.equal(get('Libro senza episodi').length,0);
+ const first=get('Il conte di Montecristo');first[0].title='Modificato';
+ assert.equal(get('Il conte di Montecristo')[0].title,'L’arrivo del Faraone');
+});
+test('episode choice is loaded before app core and is used only for matching books',()=>{
+ const html=read('index.html');
+ const scripts=[...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m=>m[1]);
+ const names=['episodes.js','episode-choice.js','app-core.js'].map(n=>scripts.findIndex(s=>s.endsWith('/'+n)));
+ assert.ok(names.every(n=>n>=0));assert.ok(names[0]<names[1]&&names[1]<names[2]);
+ const core=read('lab/modules/app-core.js');
+ assert.match(core,/if\(!skipEpisodeChoice&&window\.REMEpisodes\?\.episodesFor\(book\.title\)\.length&&window\.REMEpisodeChoice\)/);
+ assert.match(core,/window\.REMEpisodeChoice\.choose\(book\.title,\(\)=>openBook\(id,true\)\)/);
+});
+test('choice preserves original modes, formats, and demo disclaimer',()=>{
+ const ui=read('lab/modules/episode-choice.js');
+ for(const label of ['Libro completo','A episodi','Ebook','Audiolibro','Cartaceo','Tutti gli episodi','Apri libro completo','scheda episodio dimostrativa'])assert.ok(ui.includes(label),label);
+ for(const suffix of ["save('','full')","save('','episodes')","save('-episode',String(i))","save('-format',format)"])assert.ok(ui.includes(suffix),suffix);
+});
