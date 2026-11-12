@@ -35,6 +35,7 @@ function choose(title,openFull){
    line('p',/montecristo/i.test(title)?'Il capitolo iniziale di Alexandre Dumas, presentato in brevi tappe narrative.':'Un primo episodio dimostrativo per esplorare la lettura a puntate.');
    episodes.forEach((ep,i)=>{
     const card=document.createElement('div');card.className='rem-episode-card';
+    const number=document.createElement('span');number.className='rem-episode-number';number.textContent=String(i+1);number.setAttribute('aria-label','Episodio '+(i+1));card.append(number);
     const heading=document.createElement('h3');heading.textContent=ep.title;card.append(heading);
     const intro=document.createElement('p');intro.textContent=ep.intro;card.append(intro);
     ['ebook','audio','cartaceo'].forEach(format=>card.append(button(({ebook:'Ebook',audio:'Audiolibro',cartaceo:'Cartaceo'})[format],()=>{index=i;save('-episode',String(i));save('-format',format);stage='reader';render()})));
