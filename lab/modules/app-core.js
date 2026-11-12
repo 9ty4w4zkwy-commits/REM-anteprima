@@ -70,6 +70,7 @@ function changeChapter(offset){
  renderChapter();
  $('chapterTitle').scrollIntoView({behavior:'auto',block:'start'});
 }
+$('finishBook').onclick=()=>{if(state.selected)window.REMBookRating?.complete(state.selected)};
 $('previousChapter').onclick=()=>changeChapter(-1);
 $('nextChapter').onclick=()=>changeChapter(1);
 function setImmersive(enabled){
