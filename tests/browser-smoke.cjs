@@ -53,6 +53,8 @@ const {chromium}=require('playwright');
   await page.screenshot({path:'test-artifacts/episode-list-mobile.png',fullPage:false});
   await episodeDialog.getByText('L’arrivo del Faraone').waitFor();
   if(await episodeDialog.locator('.rem-episode-card').count()!==3)throw Error('Original Montecristo episode cards missing');
+  const episodeNumbers=await episodeDialog.locator('.rem-episode-number').allTextContents();
+  if(episodeNumbers.join(',')!=='1,2,3')throw Error('Original episode numbering missing or incorrect');
   if(await episodeDialog.locator('.rem-episode-card').first().getByRole('button').count()!==3)throw Error('Expected ebook, audiobook and paper formats per episode');
   await episodeDialog.getByRole('button',{name:'Audiolibro'}).first().click();
   await episodeDialog.getByText('Questa è una scheda episodio dimostrativa.',{exact:false}).waitFor();
