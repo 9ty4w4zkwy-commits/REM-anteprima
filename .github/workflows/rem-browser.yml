@@ -18,6 +18,8 @@ jobs:
         run: |
           npm install --no-save playwright
           npx playwright install --with-deps chromium
+      - name: Verify modular and episode regression tests
+        run: node --test tests/rem-modules.test.cjs tests/rem-episodes.test.cjs
       - name: Run real-browser smoke test
         shell: bash
         run: |
