@@ -316,3 +316,22 @@ test('stale audio events cannot overwrite the newly selected chapter',()=>{
  assert.equal(elements.chapterProgressLabel.textContent,'0%');
  assert.equal(elements.chapterText.textContent,'Nuovo testo');
 });
+
+test('leaving reader invalidates delayed audio progress and errors',()=>{
+ const elements={};
+ function element(){return {textContent:'',value:0,paused:true,pause(){this.paused=true},children:[],events:{},classList:{toggle(){}},
+  replaceChildren(){this.children=[]},append(node){this.children.push(node)},
+  addEventListener(name,fn){this.events[name]=fn},
+  querySelector(tag){return this.children.find(child=>child.tag===tag)||null}}}
+ for(const id of ['readingNotePanel','chapterTitle','chapterText','chapterProgress','chapterProgressLabel','source','audio'])elements[id]=element();
+ const document={getElementById:id=>elements[id],createElement:tag=>({...element(),tag})};
+ const {api}=load('reader-surface',{document,requestAnimationFrame:fn=>fn()});
+ api.REMReaderSurface.render({chapter:{id:'c',title:'Capitolo',audioUrl:'audio.mp3'},format:'audio',bookId:'b',updateProgress:()=>{}});
+ const player=elements.audio.children[0];
+ api.REMReaderSurface.stopAudio();
+ player.duration=100;player.currentTime=90;
+ player.events.timeupdate();player.events.error();
+ assert.equal(elements.chapterProgress.value,0);
+ assert.equal(elements.chapterProgressLabel.textContent,'0%');
+ assert.match(elements.chapterText.textContent,/Ascolta il capitolo/);
+});
