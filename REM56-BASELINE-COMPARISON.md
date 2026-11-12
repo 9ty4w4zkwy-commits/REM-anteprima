@@ -13,7 +13,7 @@ Repository: `9ty4w4zkwy-commits/REM.`
 Repository: `9ty4w4zkwy-commits/REM-anteprima`
 - L'anteprima usa un'app autonoma, con moduli separati per navigazione, aspetto, catalogo, lettore, cronologia e Focus Mode.
 - Non è ancora dimostrato che replichi integralmente le schermate, le regole e i dati della 5.6. L'originale contiene tra l'altro elementi per lettura cartacea, sincronizzazione tra formati, ricerca per pagina, book trailer e libreria: confrontarli uno a uno prima di dichiarare parità.
-- Le funzionalità di mensola personale e filtri introdotte dopo la 5.6 sono state rimosse dall'interfaccia e dai collegamenti; il modulo inutilizzato `personal-shelf.js` resta da eliminare in una successiva pulizia controllata.
+- Le funzionalità di mensola personale non approvate sono state escluse; il modulo inutilizzato `personal-shelf.js` è stato eliminato dal repository.
 
 ## Prossimi controlli
 1. **Completato:** recuperato il contenuto reale della pagina base ufficiale via GitHub blob.
@@ -31,7 +31,7 @@ Il recupero della base non significa ancora parità: l'anteprima ha una struttur
 - Il repository ufficiale corretto è `9ty4w4zkwy-commits/REM.` (con punto finale). Il blob `4852bf0725a9f6cda3fbb601ba1a5b3d4345ecfd` è stato recuperato: 26.084.578 caratteri. Recupero non significa analisi integrale.
 - Il wrapper originale è stato letto: modifica copertine, apertura libro dall'inizio, valutazione con pulsante Invia e Focus Mode. Focus offre 5 o 10 minuti oppure durata personalizzata 1–240, pausa/riprendi/termina, dialogo e indicatore fisso.
 - Lo script originale `rem-episodi-v5-6.js` è stato letto: selezione libro completo / episodi per Montecristo e La casa oltre il bosco; episodi dichiarati dimostrativi, senza segmenti integrali di testo o audio.
-- Nell'anteprima `index.html` e `lab/modules/focus-timer.js` il Focus è integrato nella pagina, offre 5/10/25 minuti e pulsanti Avvia/Pausa/Azzera: differenza funzionale e visiva confermata.
+- **Rettifica:** l'anteprima attuale offre Focus 5/10/personalizzato (1–240 minuti); la precedente osservazione 5/10/25 è superata. La parità visiva e comportamentale resta da verificare.
 - `lab/styles/rem56-alignment.css` riprende parte della palette della base, ma non dimostra parità con gli override del wrapper.
 - Rimangono da verificare integralmente base, catalogo, persistenza, valutazioni, percorsi, episodi e layout responsive. Chromium non sostituisce Safari su iPhone.
 
@@ -52,7 +52,7 @@ Il recupero della base non significa ancora parità: l'anteprima ha una struttur
 
 ### Differenze e rischi ancora aperti
 1. **Focus Mode:** la baseline originale offre 5/10 minuti e durata personalizzata 1–240; il modulo anteprima mostra anche 25 minuti. Allineamento non ancora completato.
-2. **Catalogo:** l'anteprima candidate contiene solo Montecristo; la baseline episodica originale gestisce anche `La casa oltre il bosco`. Verificare catalogo e percorsi, senza aggiungere contenuti inventati.
+2. **Catalogo (aggiornato):** il catalogo candidate include entrambi i titoli; `La casa oltre il bosco` contiene 278 segmenti originali distribuiti su due capitoli. Rimangono da verificare asset, formati e resa.
 3. **Interfaccia:** la base ufficiale di circa 26 milioni di caratteri non è stata ancora confrontata integralmente, schermata per schermata, con l'anteprima. Nessuna parità visiva certificata.
 4. **Test:** esecuzione e risultati delle nuove verifiche episodiche e Chromium non ancora confermati; Safari/iPhone reale non collaudato.
 5. **Altri flussi originali:** valutazioni, formati, lettura cartacea, sincronizzazione, navigazione, contenuti e persistenza richiedono matrice di corrispondenza e verifica.
@@ -62,3 +62,8 @@ Non dichiarare la modularizzazione fedele e conclusa prima di: (a) verificare tu
 
 ### Rettifica Focus Mode — verifica diretta successiva
 La precedente indicazione secondo cui il Focus dell'anteprima avrebbe ancora il preset da 25 minuti **è superata**. Il controllo diretto dei file attuali `index.html` e `lab/modules/focus-timer.js` mostra preset **5 / 10 / Personalizza (1–240)**, pulsanti avvio/pausa/termina, indicatore persistente e dialogo di fine sessione, coerenti nei controlli principali con il wrapper ufficiale. È stato aggiunto un test di regressione in `tests/rem-episodes.test.cjs`. Rimangono da verificare esecuzione, grafica e comportamenti su browser: questa rettifica non certifica parità completa.
+
+## Stato aggiornato del blocco 3
+- Entrambi i libri sono presenti nel catalogo candidate e il test Chromium ora controlla anche **il testo effettivamente renderizzato** dei due capitoli di `La casa oltre il bosco`, non soltanto i titoli.
+- Restano aperte le differenze funzionali e visive rispetto alla base 5.6, in particolare asset audio/cartacei, valutazioni e sincronizzazione. Non sono state aggiunte funzionalità speculative.
+- **Non è disponibile un esito confermato dei workflow GitHub Actions:** le modifiche e i test aggiunti non equivalgono a una validazione browser completata.
