@@ -70,6 +70,8 @@ const {chromium}=require('playwright');
   await episodeDialog.waitFor({state:'detached'});
   await page.locator('#reader').waitFor({state:'visible'});
   if(!await page.locator('#chapterTitle').textContent())throw Error('Reader chapter title empty');
+  const loadedChapter=await page.evaluate(()=>({title:document.getElementById('chapterTitle').textContent,content:document.getElementById('readerText')?.textContent||document.getElementById('chapterText')?.textContent||''}));
+  if(!/Marsiglia|arrivo/i.test(loadedChapter.title))throw Error('Expected original Montecristo chapter title');
   await checkMobileLayout('reader');
   await page.screenshot({path:'test-artifacts/reader-mobile.png',fullPage:false});
   checkScreenshot('reader');
