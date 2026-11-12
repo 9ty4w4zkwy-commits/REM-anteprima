@@ -136,3 +136,21 @@ test('reader surface handles absence of an audio player',()=>{
  const {api}=load('reader-surface',{document});
  assert.doesNotThrow(()=>api.REMReaderSurface.stopAudio());
 });
+
+test('backgrounding the page pauses active audio',()=>{
+ let listener=null;
+ let pauses=0;
+ const player={paused:false,pause(){this.paused=true;pauses++}};
+ const document={
+  hidden:false,
+  addEventListener:(event,callback)=>{if(event==='visibilitychange')listener=callback},
+  getElementById:id=>id==='audio'?{querySelector:()=>player}:null
+ };
+ load('reader-surface',{document});
+ assert.equal(typeof listener,'function');
+ listener();
+ assert.equal(pauses,0,'Visible page must not interrupt playback');
+ document.hidden=true;
+ listener();
+ assert.equal(pauses,1,'Background page must pause playback');
+});
