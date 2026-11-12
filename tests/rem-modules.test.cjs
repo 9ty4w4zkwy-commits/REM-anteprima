@@ -99,3 +99,24 @@ test('reading store survives a module reload from persisted data',()=>{
  assert.equal(second.api.REMReadingStore.get('book-2').chapter,'chapter-3');
  assert.equal(second.api.REMReadingStore.get('book-2').format,'audio');
 });
+
+test('HTML includes all scripts exactly once and initializes core last',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
+ const scripts=[...html.matchAll(/<script\\b[^>]*\\bsrc="([^"]+)"[^>]*><\\/script>/g)].map(match=>match[1]);
+ assert.ok(scripts.length>0,'No scripts found');
+ assert.equal(new Set(scripts).size,scripts.length,'Duplicate script includes');
+ assert.equal(scripts.at(-1),'./lab/modules/app-core.js');
+ for(const src of scripts){
+  assert.ok(fs.existsSync(path.join(__dirname,'..',src)),'Missing module: '+src);
+ }
+});
+test('HTML contains every statically referenced module element',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'../index.html'),'utf8');
+ const ids=new Set([...html.matchAll(/\\bid="([^"]+)"/g)].map(match=>match[1]));
+ for(const name of ['app-core','appearance','home-view','book-detail-view','reading-history','reader-surface','reader-progress','reader-notes','focus-timer','onboarding','formats','library-view']){
+  const source=fs.readFileSync(path.join(__dirname,'../lab/modules/',name+'.js'),'utf8');
+  for(const match of source.matchAll(/(?:\\$|document\\.getElementById)\\('([^']+)'\\)/g)){
+   assert.ok(ids.has(match[1]),name+' refers to missing DOM ID: '+match[1]);
+  }
+ }
+});
