@@ -32,7 +32,32 @@ function openDetail(id){
  show('bookDetail');
 }
 if($('detailBack'))$('detailBack').onclick=library;
-function openBook(id){setImmersive(false);state.selected=state.books.find(b=>b.id===id);if(!state.selected)return;show('reader');$('bookTitle').textContent=state.selected.title;const chapters=bookChapters(id);$('chapter').replaceChildren();chapters.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=c.title;$('chapter').append(o)});const previous=window.REMReadingStore.get(id);if(chapters.some(c=>c.id===previous.chapter))$('chapter').value=previous.chapter;state.format=previous.format||'ebook';$('format').value=state.format;if($('format').value!==state.format){state.format='ebook';$('format').value='ebook'}renderChapter()}
+function openBook(id){
+ const book=state.books.find(b=>b.id===id);
+ if(!book)return;
+ const chapters=bookChapters(id);
+ if(!chapters.length){
+  notify('Nessun capitolo disponibile per '+book.title);
+  openDetail(id);
+  return;
+ }
+ setImmersive(false);
+ state.selected=book;
+ $('bookTitle').textContent=book.title;
+ $('chapter').replaceChildren();
+ for(const chapter of chapters){
+  const option=document.createElement('option');
+  option.value=chapter.id;
+  option.textContent=chapter.title;
+  $('chapter').append(option);
+ }
+ const previous=window.REMReadingStore.get(id);
+ if(chapters.some(ch=>ch.id===previous.chapter))$('chapter').value=previous.chapter;
+ $('format').value=previous.format||'ebook';
+ if(!$('format').value)$('format').value='ebook';
+ show('reader');
+ renderChapter();
+}
 function changeChapter(offset){
  const select=$('chapter'),next=select.selectedIndex+offset;
  if(next<0||next>=select.options.length)return;
