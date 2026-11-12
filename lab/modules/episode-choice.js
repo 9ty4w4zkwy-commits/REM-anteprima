@@ -39,7 +39,7 @@ function choose(title,openFull,resumeEpisodes=false){
     const number=document.createElement('span');number.className='rem-episode-number';number.textContent=String(i+1);number.setAttribute('aria-label','Episodio '+(i+1));card.append(number);
     const heading=document.createElement('h3');heading.textContent=ep.title;card.append(heading);
     const intro=document.createElement('p');intro.textContent=ep.intro;card.append(intro);
-    ['ebook','audio','cartaceo'].forEach(format=>card.append(button(({ebook:'Ebook',audio:'Audiolibro',cartaceo:'Cartaceo'})[format],()=>{index=i;save('-episode',String(i));save('-format',format);stage='reader';render()})));
+    ['ebook','audio','cartaceo'].forEach(format=>card.append(button(({ebook:'Ebook',audio:'Audiolibro',cartaceo:'Cartaceo'})[format],()=>{index=i;save('-episode',String(i));save('-format',format);try{localStorage.setItem('rem-last-episode-book-v1',title)}catch{}stage='reader';render()})));
     panel.append(card);
    });
    line('p','Anteprime editoriali: la suddivisione precisa del testo e dell’audio sarà completata in una prossima iterazione.');
