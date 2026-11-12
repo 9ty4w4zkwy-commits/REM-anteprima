@@ -26,3 +26,8 @@ Solo repository REM-anteprima. La versione ufficiale REM 5.6 non va modificata.
 
 ## Limiti della verifica
 L'ordine degli script e i collegamenti sono stati controllati tramite il contenuto GitHub. Questa verifica statica **non** dimostra che l'app sia priva di errori in esecuzione. La percentuale di completamento resta una stima, non una misura automatizzata.
+
+## Blocco di fedeltà del catalogo (verifica statica)
+Il catalogo `lab/catalog/books-candidate.json` contiene attualmente solo `Il conte di Montecristo`. Il catalogo degli episodi ufficiali REM 5.6 contiene anche `La casa oltre il bosco`, ma non basta aggiungere un titolo fittizio: prima di dichiarare la parità occorre recuperare dal file base ufficiale i metadati, le risorse e il percorso di lettura effettivamente disponibili per il secondo libro. **Non dichiarare completata la migrazione del catalogo.**
+
+Il collegamento Home → `openBook(...,false,true)` → `REMEpisodeChoice.resume()` è stato verificato staticamente su GitHub; l'esecuzione Chromium/iPhone rimane da confermare.
