@@ -35,6 +35,15 @@ function render({chapter,format,bookId,updateProgress}){
   audio.controls=true;
   audio.preload='metadata';
   audio.src=chapter.audioUrl;
+  const updateAudioProgress=()=>{
+   const duration=audio.duration;
+   const percent=Number.isFinite(duration)&&duration>0?Math.max(0,Math.min(100,Math.round(audio.currentTime/duration*100))):0;
+   $('chapterProgress').value=percent;
+   $('chapterProgressLabel').textContent=percent+'%';
+  };
+  audio.addEventListener('timeupdate',updateAudioProgress);
+  audio.addEventListener('loadedmetadata',updateAudioProgress);
+  audio.addEventListener('ended',updateAudioProgress);
   $('audio').append(audio);
  }
 }
