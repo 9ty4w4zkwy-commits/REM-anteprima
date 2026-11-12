@@ -51,6 +51,12 @@ const {chromium}=require('playwright');
   checkScreenshot('reader');
   const readerImage=await page.screenshot({fullPage:false});
   if(readerImage.length<1000)throw Error('Reader viewport capture is unexpectedly small');
+  if(await page.locator('#nextChapter').isEnabled())await page.locator('#nextChapter').click();
+  const savedReading=await page.evaluate(()=>{
+   const entries=Object.entries(JSON.parse(localStorage.getItem('rem-modular-demo-v1')||'{}'));
+   return entries.find(([,position])=>position&&typeof position.chapter==='string')||null;
+  });
+  if(!savedReading||savedReading[1].chapter!==await page.locator('#chapter').inputValue())throw Error('Current reading chapter was not saved');
   await page.locator('#focusReading').click();
   if(await page.locator('#focusReading').getAttribute('aria-pressed')!=='true')throw Error('Immersive reading did not activate');
   await page.keyboard.press('Escape');
@@ -74,6 +80,16 @@ const {chromium}=require('playwright');
   if(await page.locator('#readingTheme').inputValue()!=='sepia')throw Error('Reading theme was not restored after reload');
   if(await page.locator('html').getAttribute('data-reading-theme')!=='sepia')throw Error('Reading theme was not applied after reload');
   console.log('PASS reader appearance persists after reload');
+  await page.locator('#homeLibrary').click();
+  await page.locator('#library').waitFor({state:'visible'});
+  const resume=page.locator('#books button').filter({hasText:/Apri libro/i}).first();
+  if(!await resume.count())throw Error('Library book missing after reload');
+  await resume.click();
+  if(await page.locator('#bookDetail').isVisible())await page.locator('#detailRead').click();
+  await page.locator('#reader').waitFor({state:'visible'});
+  if(await page.locator('#chapter').inputValue()!==savedReading[1].chapter)throw Error('Reading chapter was not restored after reload');
+  console.log('PASS reading position persists after reload');
+
 
   if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
   console.log('PASS mobile browser: onboarding → home → library → reader → focus → settings → reader → library');
