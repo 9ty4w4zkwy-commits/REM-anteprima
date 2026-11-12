@@ -2,10 +2,11 @@
 (function(){
 'use strict';
 const storageKey=title=>'rem-reading-mode-53-'+title.toLowerCase().replace(/[^a-z0-9]/g,'');
-function choose(title,openFull){
+function choose(title,openFull,resumeEpisodes=false){
  const episodes=window.REMEpisodes?.episodesFor(title)||[];
  if(!episodes.length){openFull();return;}
- let stage='choice',index=0;
+ let stage=resumeEpisodes?'episodes':'choice',index=0;
+ if(resumeEpisodes){try{index=Math.max(0,Math.min(episodes.length-1,Number(localStorage.getItem(storageKey(title)+'-episode')||0)||0))}catch{}}
  const overlay=document.createElement('div');overlay.className='rem-episode-overlay';overlay.setAttribute('role','presentation');
  const panel=document.createElement('section');panel.className='rem-episode-panel';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-label',title);
  overlay.append(panel);document.body.append(overlay);
@@ -53,5 +54,5 @@ function choose(title,openFull){
  }
  render();
 }
-window.REMEpisodeChoice={choose};
+window.REMEpisodeChoice={choose,resume:(title,openFull)=>choose(title,openFull,true)};
 })();
