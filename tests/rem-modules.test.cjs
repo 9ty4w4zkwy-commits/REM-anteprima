@@ -237,7 +237,7 @@ test('reader renders ebook, audio and paper content without mixing controls',()=
   const elements={};
   function element(){
    return {textContent:'',children:[],classList:{toggle(){}},
-    replaceChildren(){this.children=[]},append(node){this.children.push(node)},
+    replaceChildren(){this.children=[]},append(node){this.children.push(node)},addEventListener(){},
     querySelector(tag){return this.children.find(child=>child.tag===tag)||null}};
   }
   for(const id of ['readingNotePanel','chapterTitle','chapterText','chapterProgress','chapterProgressLabel','source','audio'])elements[id]=element();
@@ -256,4 +256,27 @@ test('reader renders ebook, audio and paper content without mixing controls',()=
   if(format==='ebook')assert.equal(elements.chapterText.textContent,'Testo');
   if(format==='paper')assert.match(elements.chapterText.textContent,/12/);
  }
+});
+
+test('audio playback updates chapter progress from actual media position',()=>{
+ const elements={};
+ function element(){
+  return {textContent:'',value:0,children:[],events:{},classList:{toggle(){}},
+   replaceChildren(){this.children=[]},append(node){this.children.push(node)},
+   addEventListener(name,fn){this.events[name]=fn},
+   querySelector(tag){return this.children.find(child=>child.tag===tag)||null}};
+ }
+ for(const id of ['readingNotePanel','chapterTitle','chapterText','chapterProgress','chapterProgressLabel','source','audio'])elements[id]=element();
+ const document={getElementById:id=>elements[id],createElement:tag=>({...element(),tag})};
+ const {api}=load('reader-surface',{document,requestAnimationFrame:fn=>fn()});
+ api.REMReaderSurface.render({chapter:{id:'c',title:'Capitolo',audioUrl:'audio.mp3'},format:'audio',bookId:'b',updateProgress:()=>{}});
+ const player=elements.audio.children[0];
+ player.duration=120;
+ player.currentTime=30;
+ player.events.timeupdate();
+ assert.equal(elements.chapterProgress.value,25);
+ assert.equal(elements.chapterProgressLabel.textContent,'25%');
+ player.currentTime=120;
+ player.events.ended();
+ assert.equal(elements.chapterProgress.value,100);
 });
