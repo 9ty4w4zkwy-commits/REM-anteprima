@@ -10,6 +10,7 @@ const {chromium}=require('playwright');
    await page.setViewportSize({width,height:844});
    const dimensions=await page.evaluate(()=>({viewport:window.innerWidth,document:document.documentElement.scrollWidth}));
    if(dimensions.document>dimensions.viewport+2)throw Error(screen+' horizontal overflow at '+width+'px: '+dimensions.document+'px exceeds '+dimensions.viewport+'px');
+   await page.screenshot({path:'test-artifacts/'+screen+'-'+width+'px.png',fullPage:true});
   }
   await page.setViewportSize({width:390,height:844});
  }
@@ -27,6 +28,7 @@ const {chromium}=require('playwright');
   checkScreenshot('home');
   await page.locator('#homeLibrary').click();
   await page.locator('#library').waitFor({state:'visible'});
+  await checkMobileLayout('library');
   const open=page.locator('#books button').filter({hasText:/Apri libro/i}).first();
   if(await open.count())await open.click();
   else throw Error('No book action available in library');
