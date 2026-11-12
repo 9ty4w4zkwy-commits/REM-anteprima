@@ -2,6 +2,7 @@
 (function(){
 'use strict';
 const $=id=>document.getElementById(id);
+let activeAudio=null;
 function stopAudio(){
  const player=$('audio')?.querySelector('audio');
  if(player&&!player.paused)player.pause();
@@ -14,6 +15,7 @@ function paperPages(pageMap){
 }
 function render({chapter,format,bookId,updateProgress}){
  stopAudio();
+ activeAudio=null;
  const isEbook=format==='ebook';
  $('readingNotePanel').classList.toggle('hidden',!isEbook);
  if(isEbook)window.REMReaderNotes?.load(bookId,chapter.id);
@@ -35,7 +37,9 @@ function render({chapter,format,bookId,updateProgress}){
   audio.controls=true;
   audio.preload='metadata';
   audio.src=chapter.audioUrl;
+  activeAudio=audio;
   const updateAudioProgress=()=>{
+   if(activeAudio!==audio)return;
    const duration=audio.duration;
    const percent=Number.isFinite(duration)&&duration>0?Math.max(0,Math.min(100,Math.round(audio.currentTime/duration*100))):0;
    $('chapterProgress').value=percent;
@@ -45,6 +49,7 @@ function render({chapter,format,bookId,updateProgress}){
   audio.addEventListener('loadedmetadata',updateAudioProgress);
   audio.addEventListener('ended',updateAudioProgress);
   audio.addEventListener('error',()=>{
+   if(activeAudio!==audio)return;
    $('chapterText').textContent='Impossibile caricare la traccia audio. Verifica la connessione o riprova più tardi.';
   });
   $('audio').append(audio);
