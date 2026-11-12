@@ -23,7 +23,6 @@ function render({books,readingStats,openDetail,openBook}){
   $('homeFreeExplore').disabled=true;
  }
  const started=books.find(item=>readingStats(item).read>0);
- $('homeResume').classList.toggle('hidden',!started);
  const episodeBook=books.find(item=>{
   if(!window.REMEpisodes?.episodesFor(item.title).length)return false;
   try{return localStorage.getItem('rem-reading-mode-53-'+item.title.toLowerCase().replace(/[^a-z0-9]/g,''))==='episodes'}catch{return false}
@@ -40,7 +39,7 @@ function render({books,readingStats,openDetail,openBook}){
   $('homeResume').textContent='Riprendi lettura';
  }
  $('homeResume').classList.toggle('hidden',!resume);
- $('homeResume').onclick=()=>{if(resume)openBook(resume.id)};
+ $('homeResume').onclick=()=>{if(resume)openBook(resume.id,false,Boolean(episodeBook))};
 }
 window.REMHomeView={render};
 })();
