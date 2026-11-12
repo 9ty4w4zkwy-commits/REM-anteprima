@@ -32,6 +32,6 @@ function render({chapter,format,bookId,updateProgress}){
   $('audio').append(audio);
  }
 }
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAudio()});
+document.addEventListener?.('visibilitychange',()=>{if(document.hidden)stopAudio()});
 window.REMReaderSurface={render,stopAudio};
 })();
