@@ -2,6 +2,10 @@
 (function(){
 'use strict';
 const $=id=>document.getElementById(id);
+function stopAudio(){
+ const player=$('audio')?.querySelector('audio');
+ if(player&&!player.paused)player.pause();
+}
 function render({chapter,format,bookId,updateProgress}){
  const isEbook=format==='ebook';
  $('readingNotePanel').classList.toggle('hidden',!isEbook);
@@ -27,5 +31,5 @@ function render({chapter,format,bookId,updateProgress}){
   $('audio').append(audio);
  }
 }
-window.REMReaderSurface={render};
+window.REMReaderSurface={render,stopAudio};
 })();
