@@ -100,3 +100,15 @@ test('candidate catalog includes both original REM 5.6 books with extracted chap
   assert.ok(source.segmenti.every(s=>typeof s.text==='string'&&s.text.trim()));
  }
 });
+
+test('candidate catalog preserves both official 5.6 books and recovered Casa chapters',()=>{
+ const candidate=JSON.parse(read('lab/catalog/books-candidate.json'));
+ assert.deepEqual(candidate.books.map(book=>book.title),['La casa oltre il bosco','Il conte di Montecristo']);
+ const casa=candidate.books[0];
+ assert.equal(casa.contentStatus,'integrated');
+ const source=JSON.parse(read(casa.chaptersSource));
+ assert.equal(source.id,casa.id);
+ assert.equal(source.segmenti.length,278);
+ assert.deepEqual([...new Set(source.segmenti.map(s=>s.chapterTitle))],['La casa delle ortensie','Il sentiero della pioggia']);
+ assert.ok(source.segmenti.every(s=>typeof s.text==='string'&&s.text.trim()&&Number.isInteger(s.chapter)));
+});
