@@ -24,6 +24,7 @@ if($('homeShelfLibrary'))$('homeShelfLibrary').onclick=library;
 if($('libraryHome'))$('libraryHome').onclick=home;
 function library(){setImmersive(false);show('library');updateHistory();window.REMLibrary.render({books:state.books,bookChapters,readingStats,openDetail,openBook});}
 $('bookSearch').addEventListener('input',library);
+$('shelfFilter').addEventListener('change',library);
 function openDetail(id){
  const book=state.books.find(item=>item.id===id);
  if(!book||!$('bookDetail'))return;
