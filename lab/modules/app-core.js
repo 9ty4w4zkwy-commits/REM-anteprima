@@ -32,11 +32,12 @@ function openDetail(id){
  show('bookDetail');
 }
 if($('detailBack'))$('detailBack').onclick=library;
-function openBook(id,skipEpisodeChoice=false){
+function openBook(id,skipEpisodeChoice=false,resumeEpisodes=false){
  const book=state.books.find(b=>b.id===id);
  if(!book)return;
  if(!skipEpisodeChoice&&window.REMEpisodes?.episodesFor(book.title).length&&window.REMEpisodeChoice){
-  window.REMEpisodeChoice.choose(book.title,()=>openBook(id,true));
+  if(resumeEpisodes)window.REMEpisodeChoice.resume(book.title,()=>openBook(id,true));
+  else window.REMEpisodeChoice.choose(book.title,()=>openBook(id,true));
   return;
  }
  const chapters=bookChapters(id);
