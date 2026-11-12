@@ -137,7 +137,7 @@ const {chromium}=require('playwright');
   await page.locator('#home').waitFor({state:'visible'});
   if(!await page.locator('#homeResume').isVisible())throw Error('Episode resume button missing from Home');
   if((await page.locator('#homeResume').textContent()).trim()!=='Riprendi episodio')throw Error('Home did not label the episodic reading mode');
-  if(!/Lettura a episodi · 1 \/ 3/.test(await page.locator('#homeResumeStatus').textContent()))throw Error('Saved episode progress not shown in Home');
+  if(!/Lettura a episodi · 1 \/ 3 · Il conte di Montecristo/.test(await page.locator('#homeResumeStatus').textContent()))throw Error('Home resumed wrong book or lost saved episode progress');
   await page.locator('#homeResume').click();
   const resumedEpisodeDialog=page.locator('.rem-episode-panel');
   await resumedEpisodeDialog.waitFor({state:'visible'});
