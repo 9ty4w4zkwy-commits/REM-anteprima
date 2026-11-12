@@ -58,3 +58,11 @@ test('candidate catalog uses the original extracted Montecristo text, not the de
  assert.match(loader,/chapters=chapters\.filter\(ch=>ch\.bookId!==book\.id\)/);
  assert.match(loader,/segments\.map\(segment=>segment\.text\|\|segment\.testo\|\|''\)/);
 });
+
+test('preview excludes the unapproved personal shelf feature',()=>{
+ assert.equal(fs.existsSync(path.join(root,'lab/modules/personal-shelf.js')),false);
+ const html=read('index.html');
+ assert.doesNotMatch(html,/personal-shelf\.js|REM(?:Shelf|PersonalShelf)/);
+ const core=read('lab/modules/app-core.js');
+ assert.doesNotMatch(core,/REM(?:Shelf|PersonalShelf)|rem-modular-shelf-v1/);
+});
