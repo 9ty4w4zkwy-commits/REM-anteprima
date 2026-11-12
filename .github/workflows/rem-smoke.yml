@@ -20,4 +20,4 @@ jobs:
           set -euo pipefail
           for file in lab/modules/*.js; do node --check "$file"; done
       - name: Run module smoke tests
-        run: node --test tests/rem-modules.test.cjs
+        run: node --test tests/rem-modules.test.cjs tests/rem-episodes.test.cjs
