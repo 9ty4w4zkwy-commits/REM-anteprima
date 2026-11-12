@@ -335,3 +335,12 @@ test('leaving reader invalidates delayed audio progress and errors',()=>{
  assert.equal(elements.chapterProgressLabel.textContent,'0%');
  assert.match(elements.chapterText.textContent,/Ascolta il capitolo/);
 });
+
+test('missing chapter fallback stops audio and clears stale progress',()=>{
+ const core=fs.readFileSync(path.join(__dirname,'../lab/modules/app-core.js'),'utf8');
+ const missing=core.match(/if\(!id\|\|!chapter\)\{([\s\S]*?)\n  return;/);
+ assert.ok(missing,'missing chapter fallback must exist');
+ assert.match(missing[1],/REMReaderSurface\?\.stopAudio\(\)/);
+ assert.match(missing[1],/chapterProgress'\)\.value=0/);
+ assert.match(missing[1],/chapterProgressLabel'\)\.textContent='0%'/);
+});
