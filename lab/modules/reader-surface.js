@@ -44,6 +44,9 @@ function render({chapter,format,bookId,updateProgress}){
   audio.addEventListener('timeupdate',updateAudioProgress);
   audio.addEventListener('loadedmetadata',updateAudioProgress);
   audio.addEventListener('ended',updateAudioProgress);
+  audio.addEventListener('error',()=>{
+   $('chapterText').textContent='Impossibile caricare la traccia audio. Verifica la connessione o riprova più tardi.';
+  });
   $('audio').append(audio);
  }
 }
