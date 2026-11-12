@@ -231,3 +231,29 @@ test('catalog rejects chapters with missing titles or book references',async()=>
  const {api}=load('catalog-loader',{fetch,document});
  await assert.rejects(api.REMCatalogLoader.load(),/Capitoli/);
 });
+
+test('reader renders ebook, audio and paper content without mixing controls',()=>{
+ for(const format of ['ebook','audio','paper']){
+  const elements={};
+  function element(){
+   return {textContent:'',children:[],classList:{toggle(){}},
+    replaceChildren(){this.children=[]},append(node){this.children.push(node)},
+    querySelector(tag){return this.children.find(child=>child.tag===tag)||null}};
+  }
+  for(const id of ['readingNotePanel','chapterTitle','chapterText','chapterProgress','chapterProgressLabel','source','audio'])elements[id]=element();
+  const document={getElementById:id=>elements[id],createElement:tag=>({...element(),tag})};
+  let notes=0,updates=0;
+  const {api}=load('reader-surface',{document,requestAnimationFrame:fn=>fn()});
+  api.REMReaderNotes={load:()=>notes++};
+  api.REMReaderSurface.render({
+   chapter:{id:'c',title:'Capitolo',text:'Testo',audioUrl:'audio.mp3',pageMap:[{page:12}]},
+   format,bookId:'b',updateProgress:()=>updates++
+  });
+  assert.equal(elements.chapterTitle.textContent,'Capitolo');
+  assert.equal(updates,1);
+  assert.equal(notes,format==='ebook'?1:0);
+  assert.equal(elements.audio.children.length,format==='audio'?1:0);
+  if(format==='ebook')assert.equal(elements.chapterText.textContent,'Testo');
+  if(format==='paper')assert.match(elements.chapterText.textContent,/12/);
+ }
+});
