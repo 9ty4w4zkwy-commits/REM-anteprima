@@ -2,23 +2,16 @@
 (async function(){
 'use strict';
 const $=id=>document.getElementById(id),state={books:[],chapters:[],selected:null,format:'ebook',timer:null,remaining:0,deadline:0,focusDuration:0,settingsReturn:'library'};
-const key='rem-modular-demo-v1';let progress={};try{progress=JSON.parse(localStorage.getItem(key)||'{}')}catch{}
-const save=()=>{try{localStorage.setItem(key,JSON.stringify(progress))}catch{}};
 const notify=s=>{$('status').textContent=s};
 const show=window.REMNavigation.show;
 const welcomeKey='rem-modular-welcome-v1';
 $('welcomeStart').onclick=()=>{window.REMAppearance.set('readingTheme',$('welcomeTheme').value);try{localStorage.setItem(welcomeKey,'seen')}catch{}if(document.documentElement.dataset.catalog==='candidate')home();else library()};
 const bookChapters=id=>state.chapters.filter(c=>c.bookId===id);
-function readingStats(book){
- const chapters=bookChapters(book.id);
- const previous=progress[book.id]||{};
- const index=chapters.findIndex(c=>c.id===previous.chapter);
- return {chapters,read:index<0?0:index+1,total:chapters.length};
-}
+function readingStats(book){return window.REMReadingStore.stats(book,bookChapters(book.id));}
 function updateHistory(){window.REMReadingHistory.render({books:state.books,readingStats,openBook});}
 $('resetReading').onclick=()=>{
  if(!window.confirm('Cancellare tutti i progressi di lettura salvati su questo dispositivo?'))return;
- progress={};save();library();notify('Progressi di lettura cancellati');
+ window.REMReadingStore.clear();library();notify('Progressi di lettura cancellati');
 };
 function home(){
  if(document.documentElement.dataset.catalog!=='candidate')return library();
@@ -55,7 +48,7 @@ function openDetail(id){
  show('bookDetail');
 }
 if($('detailBack'))$('detailBack').onclick=library;
-function openBook(id){setImmersive(false);state.selected=state.books.find(b=>b.id===id);if(!state.selected)return;show('reader');$('bookTitle').textContent=state.selected.title;const chapters=bookChapters(id);$('chapter').replaceChildren();chapters.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=c.title;$('chapter').append(o)});const previous=progress[id]||{};if(chapters.some(c=>c.id===previous.chapter))$('chapter').value=previous.chapter;state.format=previous.format||'ebook';$('format').value=state.format;if($('format').value!==state.format){state.format='ebook';$('format').value='ebook'}window.REMFormats.configure(chapters);renderChapter()}
+function openBook(id){setImmersive(false);state.selected=state.books.find(b=>b.id===id);if(!state.selected)return;show('reader');$('bookTitle').textContent=state.selected.title;const chapters=bookChapters(id);$('chapter').replaceChildren();chapters.forEach(c=>{const o=document.createElement('option');o.value=c.id;o.textContent=c.title;$('chapter').append(o)});const previous=window.REMReadingStore.get(id);if(chapters.some(c=>c.id===previous.chapter))$('chapter').value=previous.chapter;state.format=previous.format||'ebook';$('format').value=state.format;if($('format').value!==state.format){state.format='ebook';$('format').value='ebook'}window.REMFormats.configure(chapters);renderChapter()}
 function changeChapter(offset){
  const select=$('chapter'),next=select.selectedIndex+offset;
  if(next<0||next>=select.options.length)return;
@@ -73,7 +66,7 @@ function setImmersive(enabled){
 $('focusReading').onclick=()=>setImmersive(!document.body.classList.contains('immersive-reading'));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('immersive-reading'))setImmersive(false)});
 const updateChapterProgress=()=>window.REMReaderProgress?.update();
-function renderChapter(){setImmersive(false);const id=state.selected?.id,c=state.chapters.find(ch=>ch.id===$('chapter').value);if(!id||!c){$('chapterTitle').textContent='Contenuto non disponibile';$('chapterText').textContent='Questo libro non ha ancora capitoli migrati.';return;}$('previousChapter').disabled=$('chapter').selectedIndex<=0;$('nextChapter').disabled=$('chapter').selectedIndex>=$('chapter').options.length-1;state.format=$('format').value;progress[id]={chapter:c.id,format:state.format};save();window.REMReaderSurface.render({chapter:c,format:state.format,bookId:id,updateProgress:updateChapterProgress});}
+function renderChapter(){setImmersive(false);const id=state.selected?.id,c=state.chapters.find(ch=>ch.id===$('chapter').value);if(!id||!c){$('chapterTitle').textContent='Contenuto non disponibile';$('chapterText').textContent='Questo libro non ha ancora capitoli migrati.';return;}$('previousChapter').disabled=$('chapter').selectedIndex<=0;$('nextChapter').disabled=$('chapter').selectedIndex>=$('chapter').options.length-1;state.format=$('format').value;window.REMReadingStore.set(id,{chapter:c.id,format:state.format});window.REMReaderSurface.render({chapter:c,format:state.format,bookId:id,updateProgress:updateChapterProgress});}
 $('chapter').onchange=renderChapter;$('format').onchange=renderChapter;$('goLibrary').onclick=library;$('goSettings').onclick=()=>{state.settingsReturn=$('reader').classList.contains('hidden')?'library':'reader';show('settings')};$('goBack').onclick=()=>{if(state.settingsReturn==='reader'&&state.selected)show('reader');else library()};
 $('readerAppearance').onclick=()=>{state.settingsReturn='reader';show('settings')};
 $('fontSize').onchange=()=>window.REMAppearance.set('fontSize',$('fontSize').value);
