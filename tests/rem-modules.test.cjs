@@ -185,3 +185,33 @@ test('catalog rejects chapters without usable content',async()=>{
  const {api}=load('catalog-loader',{fetch,document});
  await assert.rejects(api.REMCatalogLoader.load(),/Capitoli/);
 });
+
+test('format selector switches to audio for an audio-only chapter',()=>{
+ const select={value:'ebook',options:[{value:'ebook'},{value:'audio'},{value:'paper'}]};
+ const target={buttons:[],replaceChildren(){this.buttons=[]},append(button){this.buttons.push(button)}};
+ const document={
+  getElementById:id=>id==='format'?select:id==='formatSwitch'?target:null,
+  createElement:()=>({disabled:false,setAttribute(){},append(){}})
+ };
+ const {api}=load('formats',{document});
+ const available=api.REMFormats.configure([{id:'audio-1',audioUrl:'chapter.mp3'}]);
+ assert.equal(available.audio,true);
+ assert.equal(available.ebook,false);
+ assert.equal(select.value,'audio');
+ assert.equal(select.options[0].disabled,true);
+ assert.equal(select.options[1].disabled,false);
+ assert.equal(target.buttons[1].disabled,false);
+});
+test('format selector switches to paper for a paper-only chapter',()=>{
+ const select={value:'audio',options:[{value:'ebook'},{value:'audio'},{value:'paper'}]};
+ const target={buttons:[],replaceChildren(){this.buttons=[]},append(button){this.buttons.push(button)}};
+ const document={
+  getElementById:id=>id==='format'?select:id==='formatSwitch'?target:null,
+  createElement:()=>({disabled:false,setAttribute(){},append(){}})
+ };
+ const {api}=load('formats',{document});
+ api.REMFormats.configure([{id:'paper-1',pageMap:[{page:4}]}]);
+ assert.equal(select.value,'paper');
+ assert.equal(select.options[2].disabled,false);
+ assert.equal(target.buttons[2].disabled,false);
+});
