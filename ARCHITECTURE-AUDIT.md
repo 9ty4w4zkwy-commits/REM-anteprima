@@ -4,7 +4,7 @@
 Solo repository REM-anteprima. La versione ufficiale REM 5.6 non va modificata.
 
 ## Risultati verificati nel codice
-- `index.html` carica 14 moduli prima di `app-core.js`, tutti con `defer`.
+- `index.html` carica 16 moduli prima di `app-core.js`, inclusi `episodes.js` e `episode-choice.js`, tutti con `defer`.
 - `navigation.js`: visibilità delle schermate.
 - `appearance.js`: preferenze grafiche e persistenza.
 - `reading-store.js`: posizione e formato salvati in localStorage.
@@ -13,6 +13,7 @@ Solo repository REM-anteprima. La versione ufficiale REM 5.6 non va modificata.
 - `catalog-loader.js`: caricamento, validazione e import dei capitoli legacy.
 - `reader-surface.js`, `formats.js`: lettore e disponibilità dei formati.
 - Altri moduli: onboarding, focus timer, avanzamento e note del lettore.
+- `personal-shelf.js`, residuo di una funzione non approvata, è stato eliminato; nessun collegamento nell'interfaccia o nel core è stato trovato.
 
 ## Verifiche ancora necessarie
 1. Avvio reale su browser mobile e iPhone, con controllo della console.
