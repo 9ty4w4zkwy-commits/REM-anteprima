@@ -21,4 +21,7 @@ Repository: `9ty4w4zkwy-commits/REM-anteprima`
 3. Redigere una matrice di corrispondenza ufficiale ↔ moduli anteprima.
 4. Correggere le differenze senza nuove funzioni e testare browser; Safari/iPhone richiede verifica specifica.
 
+## Nota di fedeltà
+Il recupero della base non significa ancora parità: l'anteprima ha una struttura autonoma, mentre la 5.6 finale deriva dalla pagina base più il wrapper. Le funzionalità vanno inventariate prima di essere considerate equivalenti.
+
 **La repository ufficiale è solo fonte di confronto e non deve essere modificata.**
