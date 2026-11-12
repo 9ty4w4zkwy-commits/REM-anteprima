@@ -80,6 +80,9 @@ function renderChapter(){
  const id=state.selected?.id;
  const chapter=state.chapters.find(ch=>ch.bookId===id&&ch.id===$('chapter').value);
  if(!id||!chapter){
+  window.REMReaderSurface?.stopAudio();
+  $('chapterProgress').value=0;
+  $('chapterProgressLabel').textContent='0%';
   $('chapterTitle').textContent='Contenuto non disponibile';
   $('chapterText').textContent='Questo libro non ha ancora capitoli migrati.';
   $('previousChapter').disabled=true;
