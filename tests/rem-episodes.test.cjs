@@ -66,3 +66,12 @@ test('preview excludes the unapproved personal shelf feature',()=>{
  const core=read('lab/modules/app-core.js');
  assert.doesNotMatch(core,/REM(?:Shelf|PersonalShelf)|rem-modular-shelf-v1/);
 });
+
+test('home resume preserves the original episode progress label',()=>{
+ const home=read('lab/modules/home-view.js');
+ assert.match(home,/Lettura a episodi · /);
+ assert.match(home,/Riprendi episodio/);
+ assert.match(home,/rem-reading-mode-53-/);
+ assert.match(home,/window\.REMEpisodes\.episodesFor/);
+ assert.match(home,/Math\.min\(episodes\.length-1/);
+});
