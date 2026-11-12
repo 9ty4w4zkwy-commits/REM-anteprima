@@ -10,7 +10,14 @@ const {chromium}=require('playwright');
    await page.setViewportSize({width,height:844});
    const dimensions=await page.evaluate(()=>({viewport:window.innerWidth,document:document.documentElement.scrollWidth}));
    if(dimensions.document>dimensions.viewport+2)throw Error(screen+' horizontal overflow at '+width+'px: '+dimensions.document+'px exceeds '+dimensions.viewport+'px');
-   await page.screenshot({path:'test-artifacts/'+screen+'-'+width+'px.png',fullPage:screen!=='reader'});
+   const screenshotPath='test-artifacts/'+screen+'-'+width+'px.png';
+   await page.screenshot({path:screenshotPath,fullPage:screen!=='reader'});
+   const png=fs.readFileSync(screenshotPath);
+   if(png.length<1000||png.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error(screen+' invalid PNG screenshot at '+width+'px');
+   const imageWidth=png.readUInt32BE(16);
+   const imageHeight=png.readUInt32BE(20);
+   if(imageWidth!==width)throw Error(screen+' screenshot width mismatch: '+imageWidth+'px instead of '+width+'px');
+   if(screen==='reader'&&imageHeight!==844)throw Error('Reader screenshot height mismatch: '+imageHeight+'px instead of 844px');
   }
   await page.setViewportSize({width:390,height:844});
  }
