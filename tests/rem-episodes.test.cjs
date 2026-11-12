@@ -86,3 +86,17 @@ test('Home episode resume skips the initial choice and opens the saved episode l
  assert.match(choice,/storageKey\(title\)\+'-episode'/);
  assert.match(choice,/resume:\(title,openFull\)=>choose\(title,openFull,true\)/);
 });
+
+test('candidate catalog includes both original REM 5.6 books with extracted chapters',()=>{
+ const catalog=JSON.parse(read('lab/catalog/books-candidate.json'));
+ for(const [id,title,expectedChapters] of [['casa-oltre-bosco','La casa oltre il bosco',2],['montecristo','Il conte di Montecristo',1]]){
+  const book=catalog.books.find(b=>b.id===id);
+  assert.ok(book&&book.title===title,title);
+  assert.equal(book.contentStatus,'integrated');
+  const source=JSON.parse(read(book.chaptersSource));
+  assert.equal(source.id,id);
+  assert.ok(source.segmenti.length>0);
+  assert.equal(new Set(source.segmenti.map(s=>s.chapter)).size,expectedChapters);
+  assert.ok(source.segmenti.every(s=>typeof s.text==='string'&&s.text.trim()));
+ }
+});
