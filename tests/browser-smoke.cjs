@@ -51,6 +51,20 @@ const {chromium}=require('playwright');
   checkScreenshot('reader');
   const readerImage=await page.screenshot({fullPage:false});
   if(readerImage.length<1000)throw Error('Reader viewport capture is unexpectedly small');
+  const formatState=await page.evaluate(()=>{
+   const chapterId=document.getElementById('chapter').value;
+   const selected=document.getElementById('format').value;
+   const buttons=[...document.querySelectorAll('#formatSwitch button')];
+   return {chapterId,selected,buttons:buttons.map(b=>({disabled:b.disabled,pressed:b.getAttribute('aria-pressed'),label:b.getAttribute('aria-label')})),options:[...document.getElementById('format').options].map(o=>({value:o.value,disabled:o.disabled}))};
+  });
+  if(formatState.buttons.length!==3)throw Error('Expected three chapter-specific format buttons');
+  if(formatState.buttons.filter(b=>b.pressed==='true').length!==1)throw Error('Exactly one reading format must be selected');
+  for(let i=0;i<formatState.options.length;i++){
+   const option=formatState.options[i],button=formatState.buttons[i];
+   if(option.disabled!==button.disabled)throw Error('Format option and button availability differ: '+option.value);
+   if(button.disabled&&button.pressed==='true')throw Error('Unavailable reading format appears selected');
+  }
+  console.log('PASS chapter format availability and exclusive selection');
   if(await page.locator('#nextChapter').isEnabled())await page.locator('#nextChapter').click();
   const savedReading=await page.evaluate(()=>{
    const entries=Object.entries(JSON.parse(localStorage.getItem('rem-modular-demo-v1')||'{}'));
