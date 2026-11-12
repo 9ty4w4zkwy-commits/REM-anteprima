@@ -30,3 +30,16 @@ test('choice preserves original modes, formats, and demo disclaimer',()=>{
  for(const label of ['Libro completo','A episodi','Ebook','Audiolibro','Cartaceo','Tutti gli episodi','Apri libro completo','scheda episodio dimostrativa'])assert.ok(ui.includes(label),label);
  for(const suffix of ["save('','full')","save('','episodes')","save('-episode',String(i))","save('-format',format)"])assert.ok(ui.includes(suffix),suffix);
 });
+
+test('Focus Mode matches REM 5.6 duration presets and custom range',()=>{
+ const html=read('index.html');
+ const choice=html.match(/<div id="remSessionChoices">([\s\S]*?)<\/div>/);
+ assert.ok(choice,'Focus choices missing');
+ assert.deepEqual([...choice[1].matchAll(/data-min="([^"]+)"/g)].map(m=>m[1]),['5','10','custom']);
+ assert.match(html,/id="remCustomMinutes"[^>]*min="1"[^>]*max="240"/);
+ const focus=read('lab/modules/focus-timer.js');
+ assert.match(focus,/mins<1\|\|mins>240/);
+ for(const control of ['remSessionStart','remSessionPause','remSessionStop','remSessionClose'])assert.ok(focus.includes("$('"+control+"')"),control);
+ assert.match(focus,/setInterval\(/);
+ assert.match(focus,/window\.REMFocus=/);
+});
