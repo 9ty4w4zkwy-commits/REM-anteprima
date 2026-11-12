@@ -369,3 +369,26 @@ test('missing chapter fallback stops audio and clears stale progress',()=>{
  assert.match(missing[1],/chapterProgress'\)\.value=0/);
  assert.match(missing[1],/chapterProgressLabel'\)\.textContent='0%'/);
 });
+
+test('personal shelf saves, removes, and persists books across reload',()=>{
+ const saved=new Map();
+ const localStorage={getItem:key=>saved.get(key)||null,setItem:(key,value)=>saved.set(key,value)};
+ const first=load('personal-shelf',{localStorage});
+ assert.equal(first.api.REMShelf.has('book-1'),false);
+ assert.equal(first.api.REMShelf.toggle('book-1'),true);
+ assert.equal(first.api.REMShelf.toggle('book-2'),true);
+ assert.deepEqual(JSON.parse(saved.get('rem-modular-shelf-v1')),['book-1','book-2']);
+ const second=load('personal-shelf',{localStorage});
+ assert.equal(second.api.REMShelf.has('book-1'),true);
+ assert.equal(second.api.REMShelf.has('book-2'),true);
+ assert.equal(second.api.REMShelf.toggle('book-1'),false);
+ assert.deepEqual(JSON.parse(saved.get('rem-modular-shelf-v1')),['book-2']);
+});
+test('personal shelf ignores malformed storage and invalid book identifiers',()=>{
+ const localStorage={getItem:()=>'{broken json',setItem:()=>{}};
+ const {api}=load('personal-shelf',{localStorage});
+ assert.equal(api.REMShelf.toggle(''),false);
+ assert.equal(api.REMShelf.toggle(null),false);
+ assert.equal(api.REMShelf.has('book-1'),false);
+ assert.equal(api.REMShelf.all().length,0);
+});
