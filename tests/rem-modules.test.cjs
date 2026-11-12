@@ -56,3 +56,46 @@ test('navigation shows only requested screen',()=>{
  assert.equal(elements.library.classList.contains('hidden'),true);
  assert.throws(()=>api.REMNavigation.show('invalid'),/sconosciuta/);
 });
+
+test('format selector falls back to available format and updates buttons',()=>{
+ const select={
+  value:'audio',
+  options:[{value:'ebook'},{value:'audio'},{value:'paper'}]
+ };
+ const target={
+  buttons:[],
+  replaceChildren(){this.buttons=[]},
+  append(button){this.buttons.push(button)}
+ };
+ const document={
+  getElementById:id=>id==='format'?select:id==='formatSwitch'?target:null,
+  createElement:tag=>({
+   tag,
+   disabled:false,
+   children:[],
+   setAttribute(name,value){this[name]=value},
+   append(...nodes){this.children.push(...nodes)},
+   dispatchEvent(){},
+   onclick:null
+  })
+ };
+ const {api}=load('formats',{document});
+ api.REMFormats.configure([{text:'Capitolo disponibile',audioUrl:null}]);
+ assert.equal(select.value,'ebook');
+ assert.equal(select.options[1].disabled,true);
+ assert.equal(target.buttons.length,3);
+ assert.equal(target.buttons[1].disabled,true);
+ assert.equal(target.buttons[0]['aria-pressed'],'true');
+});
+test('reading store survives a module reload from persisted data',()=>{
+ const saved=new Map();
+ const localStorage={
+  getItem:key=>saved.get(key)||null,
+  setItem:(key,value)=>saved.set(key,value)
+ };
+ const first=load('reading-store',{localStorage});
+ first.api.REMReadingStore.set('book-2',{chapter:'chapter-3',format:'audio'});
+ const second=load('reading-store',{localStorage});
+ assert.equal(second.api.REMReadingStore.get('book-2').chapter,'chapter-3');
+ assert.equal(second.api.REMReadingStore.get('book-2').format,'audio');
+});
