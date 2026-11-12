@@ -298,7 +298,7 @@ test('reader explains audio loading errors without changing format',()=>{
 
 test('stale audio events cannot overwrite the newly selected chapter',()=>{
  const elements={};
- function element(){return {textContent:'',value:0,children:[],events:{},classList:{toggle(){}},
+ function element(){return {textContent:'',value:0,paused:true,pause(){this.paused=true},children:[],events:{},classList:{toggle(){}},
   replaceChildren(){this.children=[]},append(node){this.children.push(node)},
   addEventListener(name,fn){this.events[name]=fn},
   querySelector(tag){return this.children.find(child=>child.tag===tag)||null}}}
