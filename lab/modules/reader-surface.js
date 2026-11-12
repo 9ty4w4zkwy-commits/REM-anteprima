@@ -7,6 +7,7 @@ function stopAudio(){
  if(player&&!player.paused)player.pause();
 }
 function render({chapter,format,bookId,updateProgress}){
+ stopAudio();
  const isEbook=format==='ebook';
  $('readingNotePanel').classList.toggle('hidden',!isEbook);
  if(isEbook)window.REMReaderNotes?.load(bookId,chapter.id);
