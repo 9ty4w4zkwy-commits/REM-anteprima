@@ -43,3 +43,18 @@ test('Focus Mode matches REM 5.6 duration presets and custom range',()=>{
  assert.match(focus,/setInterval\(/);
  assert.match(focus,/window\.REMFocus=/);
 });
+
+test('candidate catalog uses the original extracted Montecristo text, not the demonstration placeholder',()=>{
+ const candidate=JSON.parse(read('lab/catalog/books-candidate.json'));
+ const book=candidate.books.find(b=>b.title==='Il conte di Montecristo');
+ assert.ok(book,'Montecristo missing from candidate catalog');
+ assert.equal(book.contentStatus,'integrated');
+ assert.equal(book.chaptersSource,'lab/content/book_montecristo.json');
+ const source=JSON.parse(read(book.chaptersSource));
+ assert.equal(source.id,book.id);
+ assert.ok(source.segmenti.length>1,'Extracted source must contain multiple original segments');
+ assert.ok(source.segmenti.every(s=>typeof s.text==='string'&&s.text.trim()),'Extracted segments must contain text');
+ const loader=read('lab/modules/catalog-loader.js');
+ assert.match(loader,/chapters=chapters\.filter\(ch=>ch\.bookId!==book\.id\)/);
+ assert.match(loader,/segments\.map\(segment=>segment\.text\|\|segment\.testo\|\|''\)/);
+});
