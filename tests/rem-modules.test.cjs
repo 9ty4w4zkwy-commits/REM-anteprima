@@ -155,6 +155,31 @@ test('backgrounding the page pauses active audio',()=>{
  assert.equal(pauses,1,'Background page must pause playback');
 });
 
+test('background pause preserves audio progress after playback resumes',()=>{
+ let visibilityListener;
+ const elements={};
+ function element(){return {textContent:'',value:0,paused:true,children:[],events:{},classList:{toggle(){}},
+  pause(){this.paused=true},replaceChildren(){this.children=[]},append(node){this.children.push(node)},
+  addEventListener(name,fn){this.events[name]=fn},
+  querySelector(tag){return this.children.find(child=>child.tag===tag)||null}}}
+ for(const id of ['readingNotePanel','chapterTitle','chapterText','chapterProgress','chapterProgressLabel','source','audio'])elements[id]=element();
+ const document={hidden:false,getElementById:id=>elements[id],createElement:tag=>({...element(),tag}),
+  addEventListener:(name,fn)=>{if(name==='visibilitychange')visibilityListener=fn}};
+ const {api}=load('reader-surface',{document,requestAnimationFrame:fn=>fn()});
+ api.REMReaderSurface.render({chapter:{id:'c',title:'Capitolo',audioUrl:'audio.mp3'},format:'audio',bookId:'b',updateProgress:()=>{}});
+ const player=elements.audio.children[0];
+ player.paused=false;
+ document.hidden=true;
+ visibilityListener();
+ assert.equal(player.paused,true);
+ document.hidden=false;
+ player.paused=false;
+ player.duration=100;player.currentTime=45;
+ player.events.timeupdate();
+ assert.equal(elements.chapterProgress.value,45);
+ assert.equal(elements.chapterProgressLabel.textContent,'45%');
+});
+
 test('corrupt saved reading positions cannot crash statistics',()=>{
  const stored=new Map([['rem-modular-demo-v1',JSON.stringify({'book-1':'broken','book-2':null})]]);
  const localStorage={getItem:key=>stored.get(key)||null,setItem:(key,value)=>stored.set(key,value)};
