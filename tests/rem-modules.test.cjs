@@ -295,3 +295,24 @@ test('reader explains audio loading errors without changing format',()=>{
  assert.match(elements.chapterText.textContent,/Impossibile caricare/);
  assert.equal(elements.audio.children.length,1);
 });
+
+test('stale audio events cannot overwrite the newly selected chapter',()=>{
+ const elements={};
+ function element(){return {textContent:'',value:0,children:[],events:{},classList:{toggle(){}},
+  replaceChildren(){this.children=[]},append(node){this.children.push(node)},
+  addEventListener(name,fn){this.events[name]=fn},
+  querySelector(tag){return this.children.find(child=>child.tag===tag)||null}}}
+ for(const id of ['readingNotePanel','chapterTitle','chapterText','chapterProgress','chapterProgressLabel','source','audio'])elements[id]=element();
+ const document={getElementById:id=>elements[id],createElement:tag=>({...element(),tag})};
+ const {api}=load('reader-surface',{document,requestAnimationFrame:fn=>fn()});
+ const render=(chapter,format)=>api.REMReaderSurface.render({chapter,format,bookId:'b',updateProgress:()=>{}});
+ render({id:'a',title:'Prima',audioUrl:'first.mp3'},'audio');
+ const oldPlayer=elements.audio.children[0];
+ render({id:'b',title:'Seconda',text:'Nuovo testo'},'ebook');
+ oldPlayer.duration=100;oldPlayer.currentTime=90;
+ oldPlayer.events.timeupdate();
+ oldPlayer.events.error();
+ assert.equal(elements.chapterProgress.value,0);
+ assert.equal(elements.chapterProgressLabel.textContent,'0%');
+ assert.equal(elements.chapterText.textContent,'Nuovo testo');
+});
