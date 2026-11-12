@@ -15,20 +15,7 @@ function readingStats(book){
  const index=chapters.findIndex(c=>c.id===previous.chapter);
  return {chapters,read:index<0?0:index+1,total:chapters.length};
 }
-function updateHistory(){
- const started=state.books.filter(book=>readingStats(book).read>0).length;
- $('historySummary').textContent=started?started+' '+(started===1?'libro iniziato':'libri iniziati')+' su '+state.books.length:'Nessuna lettura iniziata.';
- $('resetReading').disabled=started===0;
- $('historyBooks').replaceChildren();
- for(const book of state.books){
-  const stats=readingStats(book);if(!stats.read)continue;
-  const button=document.createElement('button');
-  button.type='button';button.className='history-resume';
-  button.textContent='Riprendi '+book.title+' · capitolo '+stats.read+' di '+stats.total;
-  button.onclick=()=>openBook(book.id);
-  $('historyBooks').append(button);
- }
-}
+function updateHistory(){window.REMReadingHistory.render({books:state.books,readingStats,openBook});}
 $('resetReading').onclick=()=>{
  if(!window.confirm('Cancellare tutti i progressi di lettura salvati su questo dispositivo?'))return;
  progress={};save();library();notify('Progressi di lettura cancellati');
