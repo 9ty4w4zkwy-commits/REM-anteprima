@@ -75,7 +75,26 @@ function setImmersive(enabled){
 $('focusReading').onclick=()=>setImmersive(!document.body.classList.contains('immersive-reading'));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&document.body.classList.contains('immersive-reading'))setImmersive(false)});
 const updateChapterProgress=()=>window.REMReaderProgress?.update();
-function renderChapter(){setImmersive(false);const id=state.selected?.id,c=state.chapters.find(ch=>ch.id===$('chapter').value);if(!id||!c){$('chapterTitle').textContent='Contenuto non disponibile';$('chapterText').textContent='Questo libro non ha ancora capitoli migrati.';return;}$('previousChapter').disabled=$('chapter').selectedIndex<=0;$('nextChapter').disabled=$('chapter').selectedIndex>=$('chapter').options.length-1;window.REMFormats.configure([c]);state.format=$('format').value;window.REMReadingStore.set(id,{chapter:c.id,format:state.format});window.REMReaderSurface.render({chapter:c,format:state.format,bookId:id,updateProgress:updateChapterProgress});}
+function renderChapter(){
+ setImmersive(false);
+ const id=state.selected?.id;
+ const chapter=state.chapters.find(ch=>ch.bookId===id&&ch.id===$('chapter').value);
+ if(!id||!chapter){
+  $('chapterTitle').textContent='Contenuto non disponibile';
+  $('chapterText').textContent='Questo libro non ha ancora capitoli migrati.';
+  $('previousChapter').disabled=true;
+  $('nextChapter').disabled=true;
+  $('audio').replaceChildren();
+  $('audio').classList.add('hidden');
+  return;
+ }
+ $('previousChapter').disabled=$('chapter').selectedIndex<=0;
+ $('nextChapter').disabled=$('chapter').selectedIndex>=$('chapter').options.length-1;
+ window.REMFormats.configure([chapter]);
+ state.format=$('format').value;
+ window.REMReadingStore.set(id,{chapter:chapter.id,format:state.format});
+ window.REMReaderSurface.render({chapter,format:state.format,bookId:id,updateProgress:updateChapterProgress});
+}
 $('chapter').onchange=renderChapter;$('format').onchange=renderChapter;$('goLibrary').onclick=library;$('goSettings').onclick=()=>{state.settingsReturn=$('reader').classList.contains('hidden')?'library':'reader';show('settings')};$('goBack').onclick=()=>{if(state.settingsReturn==='reader'&&state.selected)show('reader');else library()};
 $('readerAppearance').onclick=()=>{state.settingsReturn='reader';show('settings')};
 $('fontSize').onchange=()=>window.REMAppearance.set('fontSize',$('fontSize').value);
