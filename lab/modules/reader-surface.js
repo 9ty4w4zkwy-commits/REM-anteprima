@@ -1,20 +1,31 @@
-/* REM reader surface: independently renders ebook, audio and paper states. */
+/* REM reader surface: render only assets available for the selected chapter. */
 (function(){
 'use strict';
 const $=id=>document.getElementById(id);
 function render({chapter,format,bookId,updateProgress}){
- $('readingNotePanel').classList.toggle('hidden',format!=='ebook');
- window.REMReaderNotes?.load(bookId,chapter.id);
+ const isEbook=format==='ebook';
+ $('readingNotePanel').classList.toggle('hidden',!isEbook);
+ if(isEbook)window.REMReaderNotes?.load(bookId,chapter.id);
  $('chapterTitle').textContent=chapter.title;
- $('chapterText').textContent=format==='ebook'?chapter.text:format==='audio'?'Traccia audio non disponibile per questo capitolo. Nessun audio simulato.':'Per il cartaceo, la sincronizzazione della posizione richiederà una mappatura tra pagine ed episodi.';
- $('chapterText').classList.toggle('reader',format==='ebook');
+ const hasAudio=typeof chapter.audioUrl==='string'&&chapter.audioUrl.trim().length>0;
+ const hasPaper=Array.isArray(chapter.pageMap)&&chapter.pageMap.length>0;
+ $('chapterText').textContent=isEbook?chapter.text||'Testo non disponibile per questo capitolo.':
+  format==='audio'?(hasAudio?'Ascolta il capitolo utilizzando il lettore audio.':'Traccia audio non disponibile per questo capitolo.'):
+  hasPaper?'Riferimenti alle pagine cartacee disponibili per questo capitolo.':'Mappatura delle pagine cartacee non disponibile per questo capitolo.';
+ $('chapterText').classList.toggle('reader',isEbook);
  $('chapterProgress').value=0;
  $('chapterProgressLabel').textContent='0%';
  requestAnimationFrame(updateProgress);
  $('source').textContent=chapter.source||'';
  $('audio').classList.toggle('hidden',format!=='audio');
  $('audio').replaceChildren();
- if(format==='audio'&&chapter.audioUrl){const audio=document.createElement('audio');audio.controls=true;audio.src=chapter.audioUrl;$('audio').append(audio)}
+ if(format==='audio'&&hasAudio){
+  const audio=document.createElement('audio');
+  audio.controls=true;
+  audio.preload='metadata';
+  audio.src=chapter.audioUrl;
+  $('audio').append(audio);
+ }
 }
 window.REMReaderSurface={render};
 })();
