@@ -25,3 +25,19 @@ Repository: `9ty4w4zkwy-commits/REM-anteprima`
 Il recupero della base non significa ancora parità: l'anteprima ha una struttura autonoma, mentre la 5.6 finale deriva dalla pagina base più il wrapper. Le funzionalità vanno inventariate prima di essere considerate equivalenti.
 
 **La repository ufficiale è solo fonte di confronto e non deve essere modificata.**
+
+## Verifica diretta del 12 novembre 2026
+
+- Il repository ufficiale corretto è `9ty4w4zkwy-commits/REM.` (con punto finale). Il blob `4852bf0725a9f6cda3fbb601ba1a5b3d4345ecfd` è stato recuperato: 26.084.578 caratteri. Recupero non significa analisi integrale.
+- Il wrapper originale è stato letto: modifica copertine, apertura libro dall'inizio, valutazione con pulsante Invia e Focus Mode. Focus offre 5 o 10 minuti oppure durata personalizzata 1–240, pausa/riprendi/termina, dialogo e indicatore fisso.
+- Lo script originale `rem-episodi-v5-6.js` è stato letto: selezione libro completo / episodi per Montecristo e La casa oltre il bosco; episodi dichiarati dimostrativi, senza segmenti integrali di testo o audio.
+- Nell'anteprima `index.html` e `lab/modules/focus-timer.js` il Focus è integrato nella pagina, offre 5/10/25 minuti e pulsanti Avvia/Pausa/Azzera: differenza funzionale e visiva confermata.
+- `lab/styles/rem56-alignment.css` riprende parte della palette della base, ma non dimostra parità con gli override del wrapper.
+- Rimangono da verificare integralmente base, catalogo, persistenza, valutazioni, percorsi, episodi e layout responsive. Chromium non sostituisce Safari su iPhone.
+
+### Prossimi interventi
+1. Inventariare completamente codice e trasformazioni della 5.6.
+2. Correggere i moduli su Focus, valutazioni, apertura e scelta episodi in base alla baseline, senza nuove funzioni.
+3. Eseguire test di regressione e confronto visivo, poi collaudo Safari iPhone.
+
+**Questa verifica ha aggiornato la documentazione, non i moduli applicativi. La fedeltà non è certificata.**
