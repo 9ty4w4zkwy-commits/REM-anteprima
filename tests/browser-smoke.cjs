@@ -64,15 +64,16 @@ const {chromium}=require('playwright');
   await page.locator('#readingTheme').selectOption('sepia');
   const savedAppearance=await page.evaluate(()=>JSON.parse(localStorage.getItem('rem-modular-reader-appearance-v1')||'null'));
   if(savedAppearance?.fontSize!=='large'||savedAppearance?.readingTheme!=='sepia')throw Error('Reader appearance was not persisted');
+  await page.locator('#goBack').click();
+  await page.locator('#reader').waitFor({state:'visible'});
+  await page.locator('#goLibrary').click();
+  await page.locator('#library').waitFor({state:'visible'});
+
   await page.reload({waitUntil:'networkidle'});
   if(await page.locator('#fontSize').inputValue()!=='large')throw Error('Font size was not restored after reload');
   if(await page.locator('#readingTheme').inputValue()!=='sepia')throw Error('Reading theme was not restored after reload');
   if(await page.locator('html').getAttribute('data-reading-theme')!=='sepia')throw Error('Reading theme was not applied after reload');
   console.log('PASS reader appearance persists after reload');
-  await page.locator('#goBack').click();
-  await page.locator('#reader').waitFor({state:'visible'});
-  await page.locator('#goLibrary').click();
-  await page.locator('#library').waitFor({state:'visible'});
 
   if(errors.length)throw Error('Browser JavaScript errors: '+errors.join(' | '));
   console.log('PASS mobile browser: onboarding → home → library → reader → focus → settings → reader → library');
