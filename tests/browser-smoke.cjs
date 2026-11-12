@@ -10,11 +10,11 @@ const {chromium}=require('playwright');
   await page.locator('#home').waitFor({state:'visible'});
   await page.locator('#homeLibrary').click();
   await page.locator('#library').waitFor({state:'visible'});
-  const open=page.locator('#library button').filter({hasText:/leggi|apri|continua/i}).first();
+  const open=page.locator('#books button').filter({hasText:/Apri libro/i}).first();
   if(await open.count())await open.click();
   else throw Error('No book action available in library');
   if(await page.locator('#bookDetail').isVisible()){
-   const read=page.locator('#bookDetail button').filter({hasText:/leggi|inizia|riprendi/i}).first();
+   const read=page.locator('#detailRead');
    if(!await read.count())throw Error('No read action in book detail');
    await read.click();
   }
