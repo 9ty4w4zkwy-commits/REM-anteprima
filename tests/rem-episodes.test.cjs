@@ -75,3 +75,14 @@ test('home resume preserves the original episode progress label',()=>{
  assert.match(home,/window\.REMEpisodes\.episodesFor/);
  assert.match(home,/Math\.min\(episodes\.length-1/);
 });
+
+test('Home episode resume skips the initial choice and opens the saved episode list',()=>{
+ const home=read('lab/modules/home-view.js');
+ const core=read('lab/modules/app-core.js');
+ const choice=read('lab/modules/episode-choice.js');
+ assert.match(home,/openBook\(resume\.id,false,Boolean\(episodeBook\)\)/);
+ assert.match(core,/if\(resumeEpisodes\)window\.REMEpisodeChoice\.resume\(book\.title,\(\)=>openBook\(id,true\)\)/);
+ assert.match(choice,/let stage=resumeEpisodes\?'episodes':'choice'/);
+ assert.match(choice,/storageKey\(title\)\+'-episode'/);
+ assert.match(choice,/resume:\(title,openFull\)=>choose\(title,openFull,true\)/);
+});
