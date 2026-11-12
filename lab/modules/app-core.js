@@ -32,9 +32,13 @@ function openDetail(id){
  show('bookDetail');
 }
 if($('detailBack'))$('detailBack').onclick=library;
-function openBook(id){
+function openBook(id,skipEpisodeChoice=false){
  const book=state.books.find(b=>b.id===id);
  if(!book)return;
+ if(!skipEpisodeChoice&&window.REMEpisodes?.episodesFor(book.title).length&&window.REMEpisodeChoice){
+  window.REMEpisodeChoice.choose(book.title,()=>openBook(id,true));
+  return;
+ }
  const chapters=bookChapters(id);
  if(!chapters.length){
   notify('Nessun capitolo disponibile per '+book.title);
