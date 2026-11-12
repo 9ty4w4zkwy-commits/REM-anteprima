@@ -6,8 +6,12 @@ const {chromium}=require('playwright');
  fs.mkdirSync('test-artifacts',{recursive:true});
  const errors=[];
  async function checkMobileLayout(screen){
-  const dimensions=await page.evaluate(()=>({viewport:window.innerWidth,document:document.documentElement.scrollWidth}));
-  if(dimensions.document>dimensions.viewport+2)throw Error(screen+' horizontal overflow: '+dimensions.document+'px exceeds '+dimensions.viewport+'px');
+  for(const width of [320,390,768]){
+   await page.setViewportSize({width,height:844});
+   const dimensions=await page.evaluate(()=>({viewport:window.innerWidth,document:document.documentElement.scrollWidth}));
+   if(dimensions.document>dimensions.viewport+2)throw Error(screen+' horizontal overflow at '+width+'px: '+dimensions.document+'px exceeds '+dimensions.viewport+'px');
+  }
+  await page.setViewportSize({width:390,height:844});
  }
  function checkScreenshot(name){
   const size=fs.statSync('test-artifacts/'+name+'-mobile.png').size;
