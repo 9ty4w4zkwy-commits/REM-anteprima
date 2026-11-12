@@ -112,3 +112,15 @@ test('candidate catalog preserves both official 5.6 books and recovered Casa cha
  assert.deepEqual([...new Set(source.segmenti.map(s=>s.chapterTitle))],['La casa delle ortensie','Il sentiero della pioggia']);
  assert.ok(source.segmenti.every(s=>typeof s.text==='string'&&s.text.trim()&&Number.isInteger(s.chapter)));
 });
+
+test('original 5.6 book completion and submitted rating are modularized',()=>{
+ const html=read('index.html');
+ assert.match(html,/id="finishBook"/);
+ const scripts=[...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map(m=>m[1]);
+ const rating=scripts.findIndex(s=>s.endsWith('/book-rating.js'));
+ const core=scripts.findIndex(s=>s.endsWith('/app-core.js'));
+ assert.ok(rating>=0&&rating<core);
+ const code=read('lab/modules/book-rating.js');
+ for(const text of ['rem-reading-feedback-v1','completed=true','rating=selected','Invia','Non ora','rem-rate-dialog'])assert.ok(code.includes(text),text);
+ assert.match(read('lab/modules/app-core.js'),/REMBookRating\?\.complete\(state\.selected\)/);
+});
