@@ -42,6 +42,8 @@ const {chromium}=require('playwright');
   await checkMobileLayout('reader');
   await page.screenshot({path:'test-artifacts/reader-mobile.png',fullPage:false});
   checkScreenshot('reader');
+  const readerImage=await page.screenshot({fullPage:false});
+  if(readerImage.length<1000)throw Error('Reader viewport capture is unexpectedly small');
   await page.locator('#focusReading').click();
   if(await page.locator('#focusReading').getAttribute('aria-pressed')!=='true')throw Error('Immersive reading did not activate');
   await page.keyboard.press('Escape');
