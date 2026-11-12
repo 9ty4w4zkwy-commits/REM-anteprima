@@ -215,3 +215,10 @@ test('format selector switches to paper for a paper-only chapter',()=>{
  assert.equal(select.options[2].disabled,false);
  assert.equal(target.buttons[2].disabled,false);
 });
+
+test('paper page references display mapped page numbers',()=>{
+ const {api}=load('reader-surface');
+ assert.equal(api.REMReaderSurface.paperPages([{page:12},{startPage:16},{from:20}]),'12, 16, 20');
+ assert.equal(api.REMReaderSurface.paperPages([4,'8',{}]),'4, 8');
+ assert.equal(api.REMReaderSurface.paperPages([{}]),'');
+});
