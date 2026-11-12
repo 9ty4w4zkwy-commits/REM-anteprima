@@ -137,7 +137,9 @@ const {chromium}=require('playwright');
   await page.locator('.rem-episode-panel').waitFor({state:'visible'});
   await page.keyboard.press('Escape');
   await page.locator('.rem-episode-panel').waitFor({state:'detached'});
-  await page.locator('#detailRead').click();
+  // The library may open the reader directly; re-open through the same library action.
+  if(await page.locator('#bookDetail').isVisible())await page.locator('#detailRead').click();
+  else await page.locator('#books button').filter({hasText:/Apri libro/i}).first().click();
   await page.locator('.rem-episode-panel').waitFor({state:'visible'});
   await page.locator('.rem-episode-panel').getByRole('button',{name:'Libro completo'}).click();
   await page.locator('#reader').waitFor({state:'visible'});
