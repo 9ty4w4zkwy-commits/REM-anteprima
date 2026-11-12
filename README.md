@@ -2,10 +2,10 @@
 
 Questa repository contiene una **prova di architettura modulare**, non la REM 5.6 ufficiale. Tutte le modifiche e i collaudi di questa fase riguardano esclusivamente **REM-anteprima**.
 
-## Stato verificato (12 novembre 2026)
+## Stato delle verifiche (12 novembre 2026)
 
-- **24 test modulari superati** su GitHub Actions.
-- Test Chromium superato: onboarding, Home, Biblioteca, Lettore, Focus Mode, Impostazioni e ritorno.
+- **24 test modulari superati** in una precedente esecuzione GitHub Actions; i test aggiunti successivamente per gli episodi non hanno ancora un esito confermato.
+- Test Chromium superato in una precedente esecuzione: onboarding, Home, Biblioteca, Lettore, Focus Mode, Impostazioni e ritorno. Il percorso episodico è stato aggiunto dopo e non è ancora certificato.
 - Controlli responsive a **320, 390 e 768 px** per Home, Biblioteca, Lettore e Impostazioni.
 - Screenshot PNG controllati per dimensioni e validità.
 - Verificato in Chromium il ripristino di tema, dimensione carattere e capitolo dopo ricaricamento.
@@ -28,10 +28,10 @@ Aprire `http://localhost:8765/` nel browser del computer.
 ## Test automatici
 
 ```sh
-node --test tests/rem-modules.test.cjs
+node --test tests/rem-modules.test.cjs tests/rem-episodes.test.cjs
 ```
 
-Il test browser richiede Playwright/Chromium e un server locale sulla porta 8765. GitHub Actions esegue i workflow `rem-smoke.yml` e `rem-browser.yml` sulle pull request.
+Il test browser richiede Playwright/Chromium e un server locale sulla porta 8765. GitHub Actions è configurato per eseguire `rem-smoke.yml` e `rem-browser.yml` su push al ramo `main` e sulle pull request. L'esistenza dei workflow non dimostra che l'ultima esecuzione sia riuscita.
 
 ## Documentazione
 
