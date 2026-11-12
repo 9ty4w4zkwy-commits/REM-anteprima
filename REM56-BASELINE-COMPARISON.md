@@ -41,3 +41,21 @@ Il recupero della base non significa ancora parità: l'anteprima ha una struttur
 3. Eseguire test di regressione e confronto visivo, poi collaudo Safari iPhone.
 
 **Questa verifica ha aggiornato la documentazione, non i moduli applicativi. La fedeltà non è certificata.**
+
+## Stato di chiusura — 12 novembre 2026 (aggiornamento)
+
+### Lettura episodica
+- Recuperati i dati esatti delle quattro schede dimostrative dal file ufficiale `rem-episodi-v5-6.js` in `lab/modules/episodes.js`.
+- Aggiunto `lab/modules/episode-choice.js` e collegato al flusso `openBook` di `app-core.js` per i titoli presenti nel catalogo originale.
+- Aggiunti stili, test unitari (`tests/rem-episodes.test.cjs`) e percorsi Chromium (`tests/browser-smoke.cjs`).
+- **Non dichiarare questa parte collaudata** fino all'esito effettivo dei nuovi test. L'API degli stati GitHub per il commit `7f3c542a7b1a54864875054205a8d39820654bdb` non ha restituito status; ciò non prova né successo né fallimento dei workflow.
+
+### Differenze e rischi ancora aperti
+1. **Focus Mode:** la baseline originale offre 5/10 minuti e durata personalizzata 1–240; il modulo anteprima mostra anche 25 minuti. Allineamento non ancora completato.
+2. **Catalogo:** l'anteprima candidate contiene solo Montecristo; la baseline episodica originale gestisce anche `La casa oltre il bosco`. Verificare catalogo e percorsi, senza aggiungere contenuti inventati.
+3. **Interfaccia:** la base ufficiale di circa 26 milioni di caratteri non è stata ancora confrontata integralmente, schermata per schermata, con l'anteprima. Nessuna parità visiva certificata.
+4. **Test:** esecuzione e risultati delle nuove verifiche episodiche e Chromium non ancora confermati; Safari/iPhone reale non collaudato.
+5. **Altri flussi originali:** valutazioni, formati, lettura cartacea, sincronizzazione, navigazione, contenuti e persistenza richiedono matrice di corrispondenza e verifica.
+
+### Criterio per chiudere la fase
+Non dichiarare la modularizzazione fedele e conclusa prima di: (a) verificare tutti i flussi 5.6; (b) correggere le differenze sostanziali; (c) ottenere test automatici verdi; (d) effettuare controllo visivo/responsive e documentare le limitazioni Safari/iPhone. La sola separazione in file JS non soddisfa il criterio.
