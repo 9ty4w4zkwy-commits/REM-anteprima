@@ -59,3 +59,6 @@ Il recupero della base non significa ancora parità: l'anteprima ha una struttur
 
 ### Criterio per chiudere la fase
 Non dichiarare la modularizzazione fedele e conclusa prima di: (a) verificare tutti i flussi 5.6; (b) correggere le differenze sostanziali; (c) ottenere test automatici verdi; (d) effettuare controllo visivo/responsive e documentare le limitazioni Safari/iPhone. La sola separazione in file JS non soddisfa il criterio.
+
+### Rettifica Focus Mode — verifica diretta successiva
+La precedente indicazione secondo cui il Focus dell'anteprima avrebbe ancora il preset da 25 minuti **è superata**. Il controllo diretto dei file attuali `index.html` e `lab/modules/focus-timer.js` mostra preset **5 / 10 / Personalizza (1–240)**, pulsanti avvio/pausa/termina, indicatore persistente e dialogo di fine sessione, coerenti nei controlli principali con il wrapper ufficiale. È stato aggiunto un test di regressione in `tests/rem-episodes.test.cjs`. Rimangono da verificare esecuzione, grafica e comportamenti su browser: questa rettifica non certifica parità completa.
