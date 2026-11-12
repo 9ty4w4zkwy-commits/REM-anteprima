@@ -29,7 +29,7 @@ function choose(title,openFull,resumeEpisodes=false){
   panel.replaceChildren();line('h2',title);
   if(stage==='choice'){
    line('p','Come vuoi vivere questa storia?');
-   panel.append(button('Libro completo',()=>{save('','full');full()}),button('A episodi',()=>{save('','episodes');stage='episodes';render()}));
+   panel.append(button('Libro completo',()=>{save('','full');full()}),button('A episodi',()=>{save('','episodes');try{localStorage.setItem('rem-last-episode-book-v1',title)}catch{}stage='episodes';render()}));
    line('p','Potrai cambiare modalità in seguito senza perdere la tua lettura.');
   }else if(stage==='episodes'){
    line('h3','STAGIONE 1');line('p',episodes.length+' '+(episodes.length===1?'episodio':'episodi')+' disponibili in questa anteprima');
