@@ -164,3 +164,24 @@ test('corrupt saved reading positions cannot crash statistics',()=>{
  assert.equal(api.REMReadingStore.stats({id:'book-2'},chapters).read,0);
  assert.equal(api.REMReadingStore.get('toString').chapter,undefined);
 });
+
+test('catalog accepts audio-only and paper-only chapters',async()=>{
+ const books={schemaVersion:1,books:[{id:'book-1',title:'Libro'}]};
+ const chapters={schemaVersion:1,chapters:[
+  {id:'audio-1',bookId:'book-1',title:'Audio',audioUrl:'audio/1.mp3'},
+  {id:'paper-1',bookId:'book-1',title:'Carta',pageMap:[{page:12}]}
+ ]};
+ const fetch=async url=>({ok:true,json:async()=>url.includes('books')?books:chapters});
+ const document={documentElement:{dataset:{catalog:'candidate'}}};
+ const {api}=load('catalog-loader',{fetch,document});
+ const result=await api.REMCatalogLoader.load();
+ assert.equal(result.chapters.length,2);
+});
+test('catalog rejects chapters without usable content',async()=>{
+ const books={schemaVersion:1,books:[{id:'book-1',title:'Libro'}]};
+ const chapters={schemaVersion:1,chapters:[{id:'empty-1',bookId:'book-1',title:'Vuoto',text:''}]};
+ const fetch=async url=>({ok:true,json:async()=>url.includes('books')?books:chapters});
+ const document={documentElement:{dataset:{catalog:'candidate'}}};
+ const {api}=load('catalog-loader',{fetch,document});
+ await assert.rejects(api.REMCatalogLoader.load(),/Capitoli/);
+});
