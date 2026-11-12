@@ -222,3 +222,12 @@ test('paper page references display mapped page numbers',()=>{
  assert.equal(api.REMReaderSurface.paperPages([4,'8',{}]),'4, 8');
  assert.equal(api.REMReaderSurface.paperPages([{}]),'');
 });
+
+test('catalog rejects chapters with missing titles or book references',async()=>{
+ const books={schemaVersion:1,books:[{id:'book-1',title:'Libro'}]};
+ const chapters={schemaVersion:1,chapters:[{id:'invalid',bookId:'book-1',text:'Testo'}]};
+ const fetch=async url=>({ok:true,json:async()=>url.includes('books')?books:chapters});
+ const document={documentElement:{dataset:{catalog:'candidate'}}};
+ const {api}=load('catalog-loader',{fetch,document});
+ await assert.rejects(api.REMCatalogLoader.load(),/Capitoli/);
+});
