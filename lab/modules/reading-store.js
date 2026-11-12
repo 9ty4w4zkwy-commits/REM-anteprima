@@ -8,8 +8,14 @@ try{
  if(stored&&typeof stored==='object'&&!Array.isArray(stored))progress=stored;
 }catch{}
 function save(){try{localStorage.setItem(key,JSON.stringify(progress))}catch{}}
-function get(bookId){return progress[bookId]||{}}
-function set(bookId,position){progress[bookId]={...position};save()}
+function get(bookId){
+ const position=Object.prototype.hasOwnProperty.call(progress,bookId)?progress[bookId]:null;
+ return position&&typeof position==='object'&&!Array.isArray(position)?position:{};
+}
+function set(bookId,position){
+ if(!bookId||!position||typeof position!=='object'||Array.isArray(position))return;
+ progress[bookId]={...position};save();
+}
 function clear(){progress={};save()}
 function stats(book,chapters){
  const previous=get(book.id);
