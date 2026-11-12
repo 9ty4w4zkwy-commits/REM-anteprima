@@ -23,10 +23,12 @@ function render({books,readingStats,openDetail,openBook}){
   $('homeFreeExplore').disabled=true;
  }
  const started=books.find(item=>readingStats(item).read>0);
- const episodeBook=books.find(item=>{
+ const episodicBooks=books.filter(item=>{
   if(!window.REMEpisodes?.episodesFor(item.title).length)return false;
   try{return localStorage.getItem('rem-reading-mode-53-'+item.title.toLowerCase().replace(/[^a-z0-9]/g,''))==='episodes'}catch{return false}
  });
+ let lastEpisodeTitle='';try{lastEpisodeTitle=localStorage.getItem('rem-last-episode-book-v1')||''}catch{}
+ const episodeBook=episodicBooks.find(item=>item.title===lastEpisodeTitle)||episodicBooks[0];
  const resume=episodeBook||started;
  if(episodeBook){
   const episodes=window.REMEpisodes.episodesFor(episodeBook.title);
