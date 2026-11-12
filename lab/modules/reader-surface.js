@@ -6,6 +6,7 @@ let activeAudio=null;
 function stopAudio(){
  const player=$('audio')?.querySelector('audio');
  if(player&&!player.paused)player.pause();
+ activeAudio=null;
 }
 function paperPages(pageMap){
  return pageMap.map(item=>{
